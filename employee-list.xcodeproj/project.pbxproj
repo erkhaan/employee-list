@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		CE19E86B2BEFD149002273EA /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = CE19E86A2BEFD149002273EA /* FirebaseAnalytics */; };
 		CE19E86D2BEFD149002273EA /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = CE19E86C2BEFD149002273EA /* FirebaseCrashlytics */; };
+		CE19E8752BEFD279002273EA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE19E8702BEFD279002273EA /* GoogleService-Info.plist */; };
 		CE3E2E2E2BEF4EE200FB2230 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E2E2D2BEF4EE200FB2230 /* AppDelegate.swift */; };
 		CE3E2E302BEF4EE200FB2230 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E2E2F2BEF4EE200FB2230 /* SceneDelegate.swift */; };
 		CE3E2E322BEF4EE200FB2230 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E2E312BEF4EE200FB2230 /* ViewController.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE19E8702BEFD279002273EA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CE3E2E2A2BEF4EE200FB2230 /* employee-list.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "employee-list.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE3E2E2D2BEF4EE200FB2230 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE3E2E2F2BEF4EE200FB2230 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,6 +46,7 @@
 		CE19E85D2BEF4F41002273EA /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				CE19E8742BEFD279002273EA /* Firebase */,
 				CE3E2E2D2BEF4EE200FB2230 /* AppDelegate.swift */,
 				CE3E2E2F2BEF4EE200FB2230 /* SceneDelegate.swift */,
 			);
@@ -73,6 +76,38 @@
 			children = (
 			);
 			path = Domain;
+			sourceTree = "<group>";
+		};
+		CE19E8712BEFD279002273EA /* dev */ = {
+			isa = PBXGroup;
+			children = (
+				CE19E8702BEFD279002273EA /* GoogleService-Info.plist */,
+			);
+			path = dev;
+			sourceTree = "<group>";
+		};
+		CE19E8722BEFD279002273EA /* prod */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = prod;
+			sourceTree = "<group>";
+		};
+		CE19E8732BEFD279002273EA /* stag */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = stag;
+			sourceTree = "<group>";
+		};
+		CE19E8742BEFD279002273EA /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				CE19E8712BEFD279002273EA /* dev */,
+				CE19E8722BEFD279002273EA /* prod */,
+				CE19E8732BEFD279002273EA /* stag */,
+			);
+			path = Firebase;
 			sourceTree = "<group>";
 		};
 		CE3E2E212BEF4EE200FB2230 = {
@@ -113,6 +148,7 @@
 				CE3E2E262BEF4EE200FB2230 /* Sources */,
 				CE3E2E272BEF4EE200FB2230 /* Frameworks */,
 				CE3E2E282BEF4EE200FB2230 /* Resources */,
+				CE19E86E2BEFD1BD002273EA /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -169,12 +205,38 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE3E2E372BEF4EE300FB2230 /* Assets.xcassets in Resources */,
+				CE19E8752BEFD279002273EA /* GoogleService-Info.plist in Resources */,
 				CE3E2E3A2BEF4EE300FB2230 /* Base in Resources */,
 				CE3E2E352BEF4EE200FB2230 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CE19E86E2BEFD1BD002273EA /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}",
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${PRODUCT_NAME}",
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Info.plist",
+				"$(TARGET_BUILD_DIR)/$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/GoogleService-Info.plist",
+				"$(TARGET_BUILD_DIR)/$(EXECUTABLE_PATH)",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${BUILD_DIR%/Build/*}/SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/run\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CE3E2E262BEF4EE200FB2230 /* Sources */ = {
@@ -279,6 +341,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 2R782SXW3H;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "employee-list/Info.plist";
@@ -370,6 +433,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 2R782SXW3H;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "employee-list/Info.plist";
@@ -685,6 +749,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 2R782SXW3H;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "employee-list/Info.plist";
