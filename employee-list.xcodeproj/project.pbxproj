@@ -10,9 +10,11 @@
 		CE19E86B2BEFD149002273EA /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = CE19E86A2BEFD149002273EA /* FirebaseAnalytics */; };
 		CE19E86D2BEFD149002273EA /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = CE19E86C2BEFD149002273EA /* FirebaseCrashlytics */; };
 		CE19E87E2BEFFADA002273EA /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE19E87D2BEFFADA002273EA /* SettingsViewController.swift */; };
+		CE19E8812BEFFC6A002273EA /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = CE19E8802BEFFC6A002273EA /* SnapKit */; };
+		CE19E8832BEFFC6A002273EA /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = CE19E8822BEFFC6A002273EA /* SnapKit-Dynamic */; };
 		CE3E2E2E2BEF4EE200FB2230 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E2E2D2BEF4EE200FB2230 /* AppDelegate.swift */; };
 		CE3E2E302BEF4EE200FB2230 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E2E2F2BEF4EE200FB2230 /* SceneDelegate.swift */; };
-		CE3E2E322BEF4EE200FB2230 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E2E312BEF4EE200FB2230 /* ViewController.swift */; };
+		CE3E2E322BEF4EE200FB2230 /* EmployeesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E2E312BEF4EE200FB2230 /* EmployeesViewController.swift */; };
 		CE3E2E352BEF4EE200FB2230 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = CE3E2E342BEF4EE200FB2230 /* Base */; };
 		CE3E2E372BEF4EE300FB2230 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE3E2E362BEF4EE300FB2230 /* Assets.xcassets */; };
 		CE3E2E3A2BEF4EE300FB2230 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = CE3E2E392BEF4EE300FB2230 /* Base */; };
@@ -26,7 +28,7 @@
 		CE3E2E2A2BEF4EE200FB2230 /* employee-list.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "employee-list.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE3E2E2D2BEF4EE200FB2230 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE3E2E2F2BEF4EE200FB2230 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CE3E2E312BEF4EE200FB2230 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CE3E2E312BEF4EE200FB2230 /* EmployeesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesViewController.swift; sourceTree = "<group>"; };
 		CE3E2E342BEF4EE200FB2230 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE3E2E362BEF4EE300FB2230 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE3E2E392BEF4EE300FB2230 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -38,8 +40,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE19E8812BEFFC6A002273EA /* SnapKit in Frameworks */,
 				CE19E86B2BEFD149002273EA /* FirebaseAnalytics in Frameworks */,
 				CE19E86D2BEFD149002273EA /* FirebaseCrashlytics in Frameworks */,
+				CE19E8832BEFFC6A002273EA /* SnapKit-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,7 +122,7 @@
 		CE19E87C2BEFFACC002273EA /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				CE3E2E312BEF4EE200FB2230 /* ViewController.swift */,
+				CE3E2E312BEF4EE200FB2230 /* EmployeesViewController.swift */,
 				CE19E87D2BEFFADA002273EA /* SettingsViewController.swift */,
 			);
 			path = Controllers;
@@ -173,6 +177,8 @@
 			packageProductDependencies = (
 				CE19E86A2BEFD149002273EA /* FirebaseAnalytics */,
 				CE19E86C2BEFD149002273EA /* FirebaseCrashlytics */,
+				CE19E8802BEFFC6A002273EA /* SnapKit */,
+				CE19E8822BEFFC6A002273EA /* SnapKit-Dynamic */,
 			);
 			productName = "employee-list";
 			productReference = CE3E2E2A2BEF4EE200FB2230 /* employee-list.app */;
@@ -204,6 +210,7 @@
 			mainGroup = CE3E2E212BEF4EE200FB2230;
 			packageReferences = (
 				CE19E8692BEFD149002273EA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				CE19E87F2BEFFC6A002273EA /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = CE3E2E2B2BEF4EE200FB2230 /* Products */;
 			projectDirPath = "";
@@ -276,7 +283,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE3E2E322BEF4EE200FB2230 /* ViewController.swift in Sources */,
+				CE3E2E322BEF4EE200FB2230 /* EmployeesViewController.swift in Sources */,
 				CE3E2E2E2BEF4EE200FB2230 /* AppDelegate.swift in Sources */,
 				CE3E2E302BEF4EE200FB2230 /* SceneDelegate.swift in Sources */,
 				CE19E87E2BEFFADA002273EA /* SettingsViewController.swift in Sources */,
@@ -873,6 +880,14 @@
 				minimumVersion = 10.25.0;
 			};
 		};
+		CE19E87F2BEFFC6A002273EA /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -885,6 +900,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CE19E8692BEFD149002273EA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseCrashlytics;
+		};
+		CE19E8802BEFFC6A002273EA /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE19E87F2BEFFC6A002273EA /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		CE19E8822BEFFC6A002273EA /* SnapKit-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE19E87F2BEFFC6A002273EA /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = "SnapKit-Dynamic";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
