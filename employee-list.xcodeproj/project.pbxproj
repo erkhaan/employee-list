@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		CE19E86B2BEFD149002273EA /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = CE19E86A2BEFD149002273EA /* FirebaseAnalytics */; };
 		CE19E86D2BEFD149002273EA /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = CE19E86C2BEFD149002273EA /* FirebaseCrashlytics */; };
-		CE19E8752BEFD279002273EA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE19E8702BEFD279002273EA /* GoogleService-Info.plist */; };
 		CE3E2E2E2BEF4EE200FB2230 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E2E2D2BEF4EE200FB2230 /* AppDelegate.swift */; };
 		CE3E2E302BEF4EE200FB2230 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E2E2F2BEF4EE200FB2230 /* SceneDelegate.swift */; };
 		CE3E2E322BEF4EE200FB2230 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E2E312BEF4EE200FB2230 /* ViewController.swift */; };
@@ -20,6 +19,8 @@
 
 /* Begin PBXFileReference section */
 		CE19E8702BEFD279002273EA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CE19E8772BEFD9F3002273EA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CE19E8792BEFD9FA002273EA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CE3E2E2A2BEF4EE200FB2230 /* employee-list.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "employee-list.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE3E2E2D2BEF4EE200FB2230 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE3E2E2F2BEF4EE200FB2230 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +90,7 @@
 		CE19E8722BEFD279002273EA /* prod */ = {
 			isa = PBXGroup;
 			children = (
+				CE19E8772BEFD9F3002273EA /* GoogleService-Info.plist */,
 			);
 			path = prod;
 			sourceTree = "<group>";
@@ -96,6 +98,7 @@
 		CE19E8732BEFD279002273EA /* stag */ = {
 			isa = PBXGroup;
 			children = (
+				CE19E8792BEFD9FA002273EA /* GoogleService-Info.plist */,
 			);
 			path = stag;
 			sourceTree = "<group>";
@@ -147,8 +150,9 @@
 			buildPhases = (
 				CE3E2E262BEF4EE200FB2230 /* Sources */,
 				CE3E2E272BEF4EE200FB2230 /* Frameworks */,
+				CE19E8762BEFD598002273EA /* Firebase plist setup */,
 				CE3E2E282BEF4EE200FB2230 /* Resources */,
-				CE19E86E2BEFD1BD002273EA /* ShellScript */,
+				CE19E86E2BEFD1BD002273EA /* Firebase Crashlytics Run Script */,
 			);
 			buildRules = (
 			);
@@ -205,7 +209,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE3E2E372BEF4EE300FB2230 /* Assets.xcassets in Resources */,
-				CE19E8752BEFD279002273EA /* GoogleService-Info.plist in Resources */,
 				CE3E2E3A2BEF4EE300FB2230 /* Base in Resources */,
 				CE3E2E352BEF4EE200FB2230 /* Base in Resources */,
 			);
@@ -214,7 +217,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		CE19E86E2BEFD1BD002273EA /* ShellScript */ = {
+		CE19E86E2BEFD1BD002273EA /* Firebase Crashlytics Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -228,6 +231,7 @@
 				"$(TARGET_BUILD_DIR)/$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/GoogleService-Info.plist",
 				"$(TARGET_BUILD_DIR)/$(EXECUTABLE_PATH)",
 			);
+			name = "Firebase Crashlytics Run Script";
 			outputFileListPaths = (
 			);
 			outputPaths = (
@@ -235,6 +239,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${BUILD_DIR%/Build/*}/SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/run\"\n";
+		};
+		CE19E8762BEFD598002273EA /* Firebase plist setup */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Firebase plist setup";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Name of the resource we're selectively copying\nGOOGLESERVICE_INFO_PLIST=GoogleService-Info.plist\n\n# Get references to dev and prod versions of the GoogleService-Info.plist\n# NOTE: These should only live on the file system and should NOT be part of the target (since we'll be adding them to the target manually)\nGOOGLESERVICE_INFO_DEV=${PROJECT_DIR}/${TARGET_NAME}/Application/Firebase/dev/${GOOGLESERVICE_INFO_PLIST}\nGOOGLESERVICE_INFO_PROD=${PROJECT_DIR}/${TARGET_NAME}/Application/Firebase/prod/${GOOGLESERVICE_INFO_PLIST}\nGOOGLESERVICE_INFO_STAG=${PROJECT_DIR}/${TARGET_NAME}/Application/Firebase/stag/${GOOGLESERVICE_INFO_PLIST}\n\n# Make sure the dev version of GoogleService-Info.plist exists\necho \"Looking for ${GOOGLESERVICE_INFO_PLIST} in ${GOOGLESERVICE_INFO_DEV}\"\nif [ ! -f $GOOGLESERVICE_INFO_DEV ]\nthen\n    echo \"No Development GoogleService-Info.plist found. Please ensure it's in the proper directory.\"\n    exit 1\nfi\n\n# Make sure the prod version of GoogleService-Info.plist exists\necho \"Looking for ${GOOGLESERVICE_INFO_PLIST} in ${GOOGLESERVICE_INFO_PROD}\"\nif [ ! -f $GOOGLESERVICE_INFO_PROD ]\nthen\n    echo \"No Production GoogleService-Info.plist found. Please ensure it's in the proper directory.\"\n    exit 1\nfi\n\n# Make sure the stag version of GoogleService-Info.plist exists\necho \"Looking for ${GOOGLESERVICE_INFO_PLIST} in ${GOOGLESERVICE_INFO_STAG}\"\nif [ ! -f $GOOGLESERVICE_INFO_STAG ]\nthen\n    echo \"No Staging GoogleService-Info.plist found. Please ensure it's in the proper directory.\"\n    exit 1\nfi\n\n# Get a reference to the destination location for the GoogleService-Info.plist\nPLIST_DESTINATION=${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app\necho \"Will copy ${GOOGLESERVICE_INFO_PLIST} to final destination: ${PLIST_DESTINATION}\"\n\n# Copy over the needed configuration GoogleService-Info.plist for builds\nif [ \"${CONFIGURATION}\" == \"employee-list-prod\" ]\nthen\n    echo \"Using ${GOOGLESERVICE_INFO_PROD}\"\n    cp \"${GOOGLESERVICE_INFO_PROD}\" \"${PLIST_DESTINATION}\"\nelif [ \"${CONFIGURATION}\" == \"employee-list-stag\" ]\nthen\n    echo \"Using ${GOOGLESERVICE_INFO_STAG}\"\n    cp \"${GOOGLESERVICE_INFO_STAG}\" \"${PLIST_DESTINATION}\"\nelse\n    echo \"Using ${GOOGLESERVICE_INFO_DEV}\"\n    cp \"${GOOGLESERVICE_INFO_DEV}\" \"${PLIST_DESTINATION}\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
