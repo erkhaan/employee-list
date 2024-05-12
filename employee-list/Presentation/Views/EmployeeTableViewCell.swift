@@ -24,6 +24,8 @@ final class EmployeeTableViewCell: UITableViewCell {
   private let nameLabel = UILabel()
   private let birthDay = UILabel()
   private let employmentDateLabel = UILabel()
+  private let ageLabel = UILabel()
+  private let experienceLabel = UILabel()
   
   override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
     super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -40,6 +42,8 @@ final class EmployeeTableViewCell: UITableViewCell {
     container.addArrangedSubview(idLabel)
     container.addArrangedSubview(birthDay)
     container.addArrangedSubview(employmentDateLabel)
+    container.addArrangedSubview(ageLabel)
+    container.addArrangedSubview(experienceLabel)
     container.snp.makeConstraints {
       $0.edges.equalToSuperview().inset(20.0)
     }
@@ -50,5 +54,7 @@ final class EmployeeTableViewCell: UITableViewCell {
     nameLabel.text = "Name: \(employee.name)"
     birthDay.text = "Date of Birth: \(employee.dateOfBirth)"
     employmentDateLabel.text = "Date of Employment: \(employee.dateOfEmployment)"
+    experienceLabel.text = "Experience: \(employee.experience)"
+    ageLabel.text = "Age: \(employee.age)"
   }
 }
