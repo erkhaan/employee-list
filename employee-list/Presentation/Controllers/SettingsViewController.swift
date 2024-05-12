@@ -78,7 +78,7 @@ final class SettingsViewController: UIViewController, UITableViewDataSource, UIT
         self,
         action: #selector(modeSwitchValueChanged),
         for: .valueChanged)
-      if presenter.themeType == .DARK {
+      if presenter.isDarkTheme {
         modeSwitch.isOn = true
       } else {
         modeSwitch.isOn = false
@@ -100,7 +100,7 @@ final class SettingsViewController: UIViewController, UITableViewDataSource, UIT
   // MARK: - Actions
   
   @objc private func modeSwitchValueChanged(sender: UISwitch) {
-    // Toggle between light and dark mode based on switch state
+    presenter.changeTheme(isDarkEnabled: sender.isOn)
   }
   
   private func crashButtonTapped() {

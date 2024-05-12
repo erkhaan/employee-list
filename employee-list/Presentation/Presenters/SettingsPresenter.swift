@@ -12,11 +12,16 @@ import Swinject
 final class SettingsPresenter {
   private let themeRepository: ThemeRepositoryProtocol
   
-  var themeType: ThemeType {
-    themeRepository.getTheme
+  var isDarkTheme: Bool {
+    themeRepository.getTheme == .DARK ? true : false
   }
   
   init() {
     self.themeRepository = DIContainer.shared.resolve(ThemeRepositoryProtocol.self)!
+  }
+  
+  func changeTheme(isDarkEnabled: Bool) {
+    let newType: ThemeType = isDarkEnabled == true ? .DARK : .LIGHT
+    themeRepository.changeTheme(with: newType)
   }
 }
