@@ -68,7 +68,6 @@ final class EmployeesViewController: UIViewController {
       }.disposed(by: disposeBag)
     tableView.rx.itemSelected
       .subscribe(onNext: { [weak self] indexPath in
-        print("Selected item at row \(indexPath.row)")
         self?.tableView.deselectRow(at: indexPath, animated: true)
       })
       .disposed(by: disposeBag)
