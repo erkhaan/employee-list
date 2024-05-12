@@ -12,16 +12,18 @@ final class SettingsViewController: UIViewController, UITableViewDataSource, UIT
   
   // MARK: - Properties
   
-  var tableView: UITableView!
-  let crashCellIdentifier = "CrashCell"
-  let modeCellIdentifier = "ModeCell"
-  private let presenter: SettingsPresenter
+  private var tableView: UITableView!
+  private let crashCellIdentifier = "CrashCell"
+  private let modeCellIdentifier = "ModeCell"
+  private var presenter: SettingsPresenter!
+  private var isDarkTheme: Bool!
   
   // MARK: - Init
   
   init() {
-    self.presenter = SettingsPresenter()
     super.init(nibName: nil, bundle: nil)
+    self.presenter = SettingsPresenter()
+    self.isDarkTheme = presenter.isDarkTheme
   }
   
   required init?(coder aDecoder: NSCoder) {
@@ -78,11 +80,7 @@ final class SettingsViewController: UIViewController, UITableViewDataSource, UIT
         self,
         action: #selector(modeSwitchValueChanged),
         for: .valueChanged)
-      if presenter.isDarkTheme {
-        modeSwitch.isOn = true
-      } else {
-        modeSwitch.isOn = false
-      }
+      modeSwitch.isOn = isDarkTheme
       cell.accessoryView = modeSwitch
       cell.textLabel?.text = "Dark Mode"
       return cell
