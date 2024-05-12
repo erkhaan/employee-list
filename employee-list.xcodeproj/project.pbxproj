@@ -35,6 +35,13 @@
 		CEBCCEFF2BF0C0190041657F /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBCCEFE2BF0C0190041657F /* DIContainer.swift */; };
 		CEBCCF022BF0C0740041657F /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = CEBCCF012BF0C0740041657F /* Swinject */; };
 		CEBCCF042BF0C0740041657F /* Swinject-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = CEBCCF032BF0C0740041657F /* Swinject-Dynamic */; };
+		CEBCCF082BF0C3A90041657F /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBCCF072BF0C3A90041657F /* ThemeManager.swift */; };
+		CEBCCF0B2BF0DDD90041657F /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CEBCCF0A2BF0DDD90041657F /* RxSwift */; };
+		CEBCCF0D2BF0DDD90041657F /* RxSwift-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = CEBCCF0C2BF0DDD90041657F /* RxSwift-Dynamic */; };
+		CEBCCF0F2BF0DE170041657F /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CEBCCF0E2BF0DE170041657F /* RxSwift */; };
+		CEBCCF112BF0DE170041657F /* RxSwift-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = CEBCCF102BF0DE170041657F /* RxSwift-Dynamic */; };
+		CEBCCF132BF0DF1B0041657F /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CEBCCF122BF0DF1B0041657F /* RxSwift */; };
+		CEBCCF152BF0DF1B0041657F /* RxSwift-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = CEBCCF142BF0DF1B0041657F /* RxSwift-Dynamic */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -130,6 +137,7 @@
 		CEBCCEF72BF0BE7A0041657F /* ThemeRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeRepositoryProtocol.swift; sourceTree = "<group>"; };
 		CEBCCEFA2BF0BEE20041657F /* SettingsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPresenter.swift; sourceTree = "<group>"; };
 		CEBCCEFE2BF0C0190041657F /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
+		CEBCCF072BF0C3A90041657F /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +145,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEBCCF152BF0DF1B0041657F /* RxSwift-Dynamic in Frameworks */,
+				CEBCCF132BF0DF1B0041657F /* RxSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,11 +162,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEBCCF0B2BF0DDD90041657F /* RxSwift in Frameworks */,
 				CEBCCEDB2BF004E80041657F /* DataLayer.framework in Frameworks */,
 				CEBCCF042BF0C0740041657F /* Swinject-Dynamic in Frameworks */,
 				CE19E89C2BEFFFBD002273EA /* Domain.framework in Frameworks */,
 				CEBCCF022BF0C0740041657F /* Swinject in Frameworks */,
 				CE19E8812BEFFC6A002273EA /* SnapKit in Frameworks */,
+				CEBCCF0D2BF0DDD90041657F /* RxSwift-Dynamic in Frameworks */,
 				CE19E86B2BEFD149002273EA /* FirebaseAnalytics in Frameworks */,
 				CE19E86D2BEFD149002273EA /* FirebaseCrashlytics in Frameworks */,
 				CE19E8832BEFFC6A002273EA /* SnapKit-Dynamic in Frameworks */,
@@ -167,6 +179,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEBCCF112BF0DE170041657F /* RxSwift-Dynamic in Frameworks */,
+				CEBCCF0F2BF0DE170041657F /* RxSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,8 +209,9 @@
 		CE19E85E2BEF4FC3002273EA /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				CEBCCEF92BF0BED70041657F /* Presenters */,
+				CEBCCF052BF0C3980041657F /* Utilities */,
 				CE19E87C2BEFFACC002273EA /* Controllers */,
+				CEBCCEF92BF0BED70041657F /* Presenters */,
 				CE3E2E332BEF4EE200FB2230 /* Main.storyboard */,
 				CE3E2E362BEF4EE300FB2230 /* Assets.xcassets */,
 				CE3E2E382BEF4EE300FB2230 /* LaunchScreen.storyboard */,
@@ -374,6 +389,14 @@
 			path = DI;
 			sourceTree = "<group>";
 		};
+		CEBCCF052BF0C3980041657F /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				CEBCCF072BF0C3A90041657F /* ThemeManager.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -410,6 +433,10 @@
 			dependencies = (
 			);
 			name = Domain;
+			packageProductDependencies = (
+				CEBCCF122BF0DF1B0041657F /* RxSwift */,
+				CEBCCF142BF0DF1B0041657F /* RxSwift-Dynamic */,
+			);
 			productName = Domain;
 			productReference = CE19E8892BEFFFBC002273EA /* Domain.framework */;
 			productType = "com.apple.product-type.framework";
@@ -458,6 +485,8 @@
 				CE19E8822BEFFC6A002273EA /* SnapKit-Dynamic */,
 				CEBCCF012BF0C0740041657F /* Swinject */,
 				CEBCCF032BF0C0740041657F /* Swinject-Dynamic */,
+				CEBCCF0A2BF0DDD90041657F /* RxSwift */,
+				CEBCCF0C2BF0DDD90041657F /* RxSwift-Dynamic */,
 			);
 			productName = "employee-list";
 			productReference = CE3E2E2A2BEF4EE200FB2230 /* employee-list.app */;
@@ -478,6 +507,10 @@
 				CEBCCEF42BF0BD740041657F /* PBXTargetDependency */,
 			);
 			name = DataLayer;
+			packageProductDependencies = (
+				CEBCCF0E2BF0DE170041657F /* RxSwift */,
+				CEBCCF102BF0DE170041657F /* RxSwift-Dynamic */,
+			);
 			productName = Data;
 			productReference = CEBCCEC82BF004E80041657F /* DataLayer.framework */;
 			productType = "com.apple.product-type.framework";
@@ -545,6 +578,7 @@
 				CE19E8692BEFD149002273EA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				CE19E87F2BEFFC6A002273EA /* XCRemoteSwiftPackageReference "SnapKit" */,
 				CEBCCF002BF0C0740041657F /* XCRemoteSwiftPackageReference "Swinject" */,
+				CEBCCF092BF0DDD90041657F /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = CE3E2E2B2BEF4EE200FB2230 /* Products */;
 			projectDirPath = "";
@@ -673,6 +707,7 @@
 				CE19E87E2BEFFADA002273EA /* SettingsViewController.swift in Sources */,
 				CEBCCEFF2BF0C0190041657F /* DIContainer.swift in Sources */,
 				CEBCCEFC2BF0BFC10041657F /* SettingsPresenter.swift in Sources */,
+				CEBCCF082BF0C3A90041657F /* ThemeManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3320,6 +3355,14 @@
 				minimumVersion = 2.8.8;
 			};
 		};
+		CEBCCF092BF0DDD90041657F /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.7.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -3352,6 +3395,36 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CEBCCF002BF0C0740041657F /* XCRemoteSwiftPackageReference "Swinject" */;
 			productName = "Swinject-Dynamic";
+		};
+		CEBCCF0A2BF0DDD90041657F /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CEBCCF092BF0DDD90041657F /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		CEBCCF0C2BF0DDD90041657F /* RxSwift-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CEBCCF092BF0DDD90041657F /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = "RxSwift-Dynamic";
+		};
+		CEBCCF0E2BF0DE170041657F /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CEBCCF092BF0DDD90041657F /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		CEBCCF102BF0DE170041657F /* RxSwift-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CEBCCF092BF0DDD90041657F /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = "RxSwift-Dynamic";
+		};
+		CEBCCF122BF0DF1B0041657F /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CEBCCF092BF0DDD90041657F /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		CEBCCF142BF0DF1B0041657F /* RxSwift-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CEBCCF092BF0DDD90041657F /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = "RxSwift-Dynamic";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

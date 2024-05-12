@@ -7,13 +7,20 @@
 
 import Foundation
 import Domain
+import RxSwift
 
 final public class ThemeDataRepository {
   private var themeType = ThemeType.LIGHT
-  public init() {}
+  private let isDarkThemeSubject: BehaviorSubject<Bool>
+  public init() {
+    isDarkThemeSubject = BehaviorSubject(value: themeType == .DARK ? true : false)
+  }
 }
 
 extension ThemeDataRepository: ThemeRepositoryProtocol {
+  public var isDarkTheme: Observable<Bool> {
+    isDarkThemeSubject
+  }
   
   public var getTheme: ThemeType {
     themeType
@@ -21,5 +28,7 @@ extension ThemeDataRepository: ThemeRepositoryProtocol {
   
   public func changeTheme(with newType: ThemeType) {
     themeType = newType
+    let newValue = themeType == .DARK ? true : false
+    isDarkThemeSubject.onNext(newValue)
   }
 }
