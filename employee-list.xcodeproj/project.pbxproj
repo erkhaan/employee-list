@@ -44,6 +44,8 @@
 		CEBCCF152BF0DF1B0041657F /* RxSwift-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = CEBCCF142BF0DF1B0041657F /* RxSwift-Dynamic */; };
 		CEBCCF1C2BF0E6DF0041657F /* ChangeThemeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBCCF1B2BF0E6DF0041657F /* ChangeThemeUseCase.swift */; };
 		CEBCCF222BF0E9D80041657F /* ChangeThemeUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBCCF212BF0E9D80041657F /* ChangeThemeUseCaseImpl.swift */; };
+		CEBCCF242BF0F7040041657F /* GetThemeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBCCF232BF0F7040041657F /* GetThemeUseCase.swift */; };
+		CEBCCF262BF0F73F0041657F /* GetThemeUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBCCF252BF0F73F0041657F /* GetThemeUseCaseImpl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -142,6 +144,8 @@
 		CEBCCF072BF0C3A90041657F /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
 		CEBCCF1B2BF0E6DF0041657F /* ChangeThemeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeThemeUseCase.swift; sourceTree = "<group>"; };
 		CEBCCF212BF0E9D80041657F /* ChangeThemeUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeThemeUseCaseImpl.swift; sourceTree = "<group>"; };
+		CEBCCF232BF0F7040041657F /* GetThemeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetThemeUseCase.swift; sourceTree = "<group>"; };
+		CEBCCF252BF0F73F0041657F /* GetThemeUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetThemeUseCaseImpl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -415,6 +419,8 @@
 			children = (
 				CEBCCF1B2BF0E6DF0041657F /* ChangeThemeUseCase.swift */,
 				CEBCCF212BF0E9D80041657F /* ChangeThemeUseCaseImpl.swift */,
+				CEBCCF232BF0F7040041657F /* GetThemeUseCase.swift */,
+				CEBCCF252BF0F73F0041657F /* GetThemeUseCaseImpl.swift */,
 			);
 			path = Theme;
 			sourceTree = "<group>";
@@ -716,7 +722,9 @@
 				CE19E8AF2BF00119002273EA /* Employee.swift in Sources */,
 				CEBCCF222BF0E9D80041657F /* ChangeThemeUseCaseImpl.swift in Sources */,
 				CEBCCF1C2BF0E6DF0041657F /* ChangeThemeUseCase.swift in Sources */,
+				CEBCCF262BF0F73F0041657F /* GetThemeUseCaseImpl.swift in Sources */,
 				CEBCCEF82BF0BE7A0041657F /* ThemeRepositoryProtocol.swift in Sources */,
+				CEBCCF242BF0F7040041657F /* GetThemeUseCase.swift in Sources */,
 				CEBCCEF22BF0BCE30041657F /* ThemeType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

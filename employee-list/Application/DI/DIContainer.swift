@@ -14,8 +14,9 @@ final class DIContainer {
   static let shared: Container = {
     let container = Container()
     
-    container.register(ThemeRepositoryProtocol.self) { _ in
-      return ThemeDataRepository()
+    container.register(GetThemeUseCase.self) { r in
+      return GetThemeUseCaseImpl(
+        repository: r.resolve(ThemeRepositoryProtocol.self)!)
     }.inObjectScope(.container)
     
     container.register(ChangeThemeUseCase.self) { r in

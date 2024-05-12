@@ -8,5 +8,5 @@
 import Foundation
 
 public protocol ChangeThemeUseCase {
-  func changeTheme(with newType: ThemeType)
+  func execute(themeType: ThemeType)
 }

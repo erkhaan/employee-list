@@ -1,5 +1,5 @@
 //
-//  ChangeThemeUseCaseImpl.swift
+//  GetThemeUseCaseImpl.swift
 //  Domain
 //
 //  Created by Erkhaan  on 12.05.2024.
@@ -7,14 +7,16 @@
 
 import Foundation
 
-final public class ChangeThemeUseCaseImpl: ChangeThemeUseCase {
+final public class GetThemeUseCaseImpl {
   private let repository: ThemeRepositoryProtocol
   
   public init(repository: ThemeRepositoryProtocol) {
     self.repository = repository
   }
-  
-  public func execute(themeType newType: ThemeType) {
-    repository.setTheme(with: newType)
+}
+
+extension GetThemeUseCaseImpl: GetThemeUseCase {
+  public func execute() -> ThemeType {
+    repository.getTheme
   }
 }
