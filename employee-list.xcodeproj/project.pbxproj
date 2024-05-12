@@ -25,7 +25,7 @@
 		CE3E2E3A2BEF4EE300FB2230 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = CE3E2E392BEF4EE300FB2230 /* Base */; };
 		CEBCCED02BF004E80041657F /* DataLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEBCCEC82BF004E80041657F /* DataLayer.framework */; };
 		CEBCCED72BF004E80041657F /* DataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBCCED62BF004E80041657F /* DataTests.swift */; };
-		CEBCCED82BF004E80041657F /* Data.h in Headers */ = {isa = PBXBuildFile; fileRef = CEBCCECA2BF004E80041657F /* Data.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CEBCCED82BF004E80041657F /* DataLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = CEBCCECA2BF004E80041657F /* DataLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CEBCCEDB2BF004E80041657F /* DataLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEBCCEC82BF004E80041657F /* DataLayer.framework */; };
 		CEBCCEDD2BF004E80041657F /* DataLayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CEBCCEC82BF004E80041657F /* DataLayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CEBCCEEF2BF09F7E0041657F /* ThemeDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBCCEEE2BF09F7E0041657F /* ThemeDataRepository.swift */; };
@@ -46,6 +46,12 @@
 		CEBCCF222BF0E9D80041657F /* ChangeThemeUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBCCF212BF0E9D80041657F /* ChangeThemeUseCaseImpl.swift */; };
 		CEBCCF242BF0F7040041657F /* GetThemeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBCCF232BF0F7040041657F /* GetThemeUseCase.swift */; };
 		CEBCCF262BF0F73F0041657F /* GetThemeUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBCCF252BF0F73F0041657F /* GetThemeUseCaseImpl.swift */; };
+		CEBCCF292BF0FB710041657F /* EmployeesDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBCCF282BF0FB710041657F /* EmployeesDataRepository.swift */; };
+		CEBCCF2E2BF0FEA60041657F /* EmployeesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBCCF2C2BF0FDC20041657F /* EmployeesViewModel.swift */; };
+		CEBCCF302BF0FF780041657F /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = CEBCCF2F2BF0FF780041657F /* RxCocoa */; };
+		CEBCCF342BF104FC0041657F /* EmployeeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBCCF322BF104C20041657F /* EmployeeTableViewCell.swift */; };
+		CEBCCF372BF108F40041657F /* EmployeeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBCCF352BF108980041657F /* EmployeeViewModel.swift */; };
+		CEBCCF3A2BF111460041657F /* DateFormatter+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBCCF392BF111460041657F /* DateFormatter+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -133,8 +139,8 @@
 		CE3E2E392BEF4EE300FB2230 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE3E2E3B2BEF4EE300FB2230 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEBCCEC82BF004E80041657F /* DataLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DataLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CEBCCECA2BF004E80041657F /* Data.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Data.h; sourceTree = "<group>"; };
-		CEBCCECF2BF004E80041657F /* DataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEBCCECA2BF004E80041657F /* DataLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataLayer.h; sourceTree = "<group>"; };
+		CEBCCECF2BF004E80041657F /* DataLayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataLayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEBCCED62BF004E80041657F /* DataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTests.swift; sourceTree = "<group>"; };
 		CEBCCEEE2BF09F7E0041657F /* ThemeDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeDataRepository.swift; sourceTree = "<group>"; };
 		CEBCCEF12BF0BCE30041657F /* ThemeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeType.swift; sourceTree = "<group>"; };
@@ -146,6 +152,11 @@
 		CEBCCF212BF0E9D80041657F /* ChangeThemeUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeThemeUseCaseImpl.swift; sourceTree = "<group>"; };
 		CEBCCF232BF0F7040041657F /* GetThemeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetThemeUseCase.swift; sourceTree = "<group>"; };
 		CEBCCF252BF0F73F0041657F /* GetThemeUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetThemeUseCaseImpl.swift; sourceTree = "<group>"; };
+		CEBCCF282BF0FB710041657F /* EmployeesDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesDataRepository.swift; sourceTree = "<group>"; };
+		CEBCCF2C2BF0FDC20041657F /* EmployeesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesViewModel.swift; sourceTree = "<group>"; };
+		CEBCCF322BF104C20041657F /* EmployeeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeTableViewCell.swift; sourceTree = "<group>"; };
+		CEBCCF352BF108980041657F /* EmployeeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeViewModel.swift; sourceTree = "<group>"; };
+		CEBCCF392BF111460041657F /* DateFormatter+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +183,7 @@
 			files = (
 				CEBCCF0B2BF0DDD90041657F /* RxSwift in Frameworks */,
 				CEBCCEDB2BF004E80041657F /* DataLayer.framework in Frameworks */,
+				CEBCCF302BF0FF780041657F /* RxCocoa in Frameworks */,
 				CEBCCF042BF0C0740041657F /* Swinject-Dynamic in Frameworks */,
 				CE19E89C2BEFFFBD002273EA /* Domain.framework in Frameworks */,
 				CEBCCF022BF0C0740041657F /* Swinject in Frameworks */,
@@ -206,6 +218,7 @@
 		CE19E85D2BEF4F41002273EA /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				CEBCCF382BF1113C0041657F /* Utilities */,
 				CEBCCEFD2BF0C00F0041657F /* DI */,
 				CE19E8742BEFD279002273EA /* Firebase */,
 				CE3E2E2D2BEF4EE200FB2230 /* AppDelegate.swift */,
@@ -217,12 +230,12 @@
 		CE19E85E2BEF4FC3002273EA /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				CEBCCF312BF104B50041657F /* Views */,
+				CEBCCF2A2BF0FC770041657F /* Common */,
 				CEBCCF052BF0C3980041657F /* Utilities */,
+				CEBCCF2B2BF0FDA90041657F /* ViewModels */,
 				CE19E87C2BEFFACC002273EA /* Controllers */,
 				CEBCCEF92BF0BED70041657F /* Presenters */,
-				CE3E2E332BEF4EE200FB2230 /* Main.storyboard */,
-				CE3E2E362BEF4EE300FB2230 /* Assets.xcassets */,
-				CE3E2E382BEF4EE300FB2230 /* LaunchScreen.storyboard */,
 			);
 			name = Presentation;
 			path = "employee-list/Presentation";
@@ -319,7 +332,7 @@
 				CE19E8892BEFFFBC002273EA /* Domain.framework */,
 				CE19E8902BEFFFBD002273EA /* DomainTests.xctest */,
 				CEBCCEC82BF004E80041657F /* DataLayer.framework */,
-				CEBCCECF2BF004E80041657F /* DataTests.xctest */,
+				CEBCCECF2BF004E80041657F /* DataLayerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -337,7 +350,7 @@
 			isa = PBXGroup;
 			children = (
 				CEBCCEED2BF09F640041657F /* Storage */,
-				CEBCCECA2BF004E80041657F /* Data.h */,
+				CEBCCECA2BF004E80041657F /* DataLayer.h */,
 			);
 			path = DataLayer;
 			sourceTree = "<group>";
@@ -354,6 +367,7 @@
 			isa = PBXGroup;
 			children = (
 				CEBCCEEE2BF09F7E0041657F /* ThemeDataRepository.swift */,
+				CEBCCF282BF0FB710041657F /* EmployeesDataRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -433,6 +447,41 @@
 			path = Theme;
 			sourceTree = "<group>";
 		};
+		CEBCCF2A2BF0FC770041657F /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				CE3E2E332BEF4EE200FB2230 /* Main.storyboard */,
+				CE3E2E362BEF4EE300FB2230 /* Assets.xcassets */,
+				CE3E2E382BEF4EE300FB2230 /* LaunchScreen.storyboard */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		CEBCCF2B2BF0FDA90041657F /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				CEBCCF2C2BF0FDC20041657F /* EmployeesViewModel.swift */,
+				CEBCCF352BF108980041657F /* EmployeeViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		CEBCCF312BF104B50041657F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CEBCCF322BF104C20041657F /* EmployeeTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CEBCCF382BF1113C0041657F /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				CEBCCF392BF111460041657F /* DateFormatter+Ext.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -448,7 +497,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEBCCED82BF004E80041657F /* Data.h in Headers */,
+				CEBCCED82BF004E80041657F /* DataLayer.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -523,6 +572,7 @@
 				CEBCCF032BF0C0740041657F /* Swinject-Dynamic */,
 				CEBCCF0A2BF0DDD90041657F /* RxSwift */,
 				CEBCCF0C2BF0DDD90041657F /* RxSwift-Dynamic */,
+				CEBCCF2F2BF0FF780041657F /* RxCocoa */,
 			);
 			productName = "employee-list";
 			productReference = CE3E2E2A2BEF4EE200FB2230 /* employee-list.app */;
@@ -551,9 +601,9 @@
 			productReference = CEBCCEC82BF004E80041657F /* DataLayer.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		CEBCCECE2BF004E80041657F /* DataTests */ = {
+		CEBCCECE2BF004E80041657F /* DataLayerTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CEBCCEE52BF004E80041657F /* Build configuration list for PBXNativeTarget "DataTests" */;
+			buildConfigurationList = CEBCCEE52BF004E80041657F /* Build configuration list for PBXNativeTarget "DataLayerTests" */;
 			buildPhases = (
 				CEBCCECB2BF004E80041657F /* Sources */,
 				CEBCCECC2BF004E80041657F /* Frameworks */,
@@ -565,9 +615,9 @@
 				CEBCCED22BF004E80041657F /* PBXTargetDependency */,
 				CEBCCED42BF004E80041657F /* PBXTargetDependency */,
 			);
-			name = DataTests;
+			name = DataLayerTests;
 			productName = DataTests;
-			productReference = CEBCCECF2BF004E80041657F /* DataTests.xctest */;
+			productReference = CEBCCECF2BF004E80041657F /* DataLayerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -624,7 +674,7 @@
 				CE19E8882BEFFFBC002273EA /* Domain */,
 				CE19E88F2BEFFFBD002273EA /* DomainTests */,
 				CEBCCEC72BF004E80041657F /* DataLayer */,
-				CEBCCECE2BF004E80041657F /* DataTests */,
+				CEBCCECE2BF004E80041657F /* DataLayerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -743,10 +793,14 @@
 			files = (
 				CE3E2E322BEF4EE200FB2230 /* EmployeesViewController.swift in Sources */,
 				CE3E2E2E2BEF4EE200FB2230 /* AppDelegate.swift in Sources */,
+				CEBCCF2E2BF0FEA60041657F /* EmployeesViewModel.swift in Sources */,
+				CEBCCF3A2BF111460041657F /* DateFormatter+Ext.swift in Sources */,
 				CE3E2E302BEF4EE200FB2230 /* SceneDelegate.swift in Sources */,
 				CE19E87E2BEFFADA002273EA /* SettingsViewController.swift in Sources */,
+				CEBCCF342BF104FC0041657F /* EmployeeTableViewCell.swift in Sources */,
 				CEBCCEFF2BF0C0190041657F /* DIContainer.swift in Sources */,
 				CEBCCEFC2BF0BFC10041657F /* SettingsPresenter.swift in Sources */,
+				CEBCCF372BF108F40041657F /* EmployeeViewModel.swift in Sources */,
 				CEBCCF082BF0C3A90041657F /* ThemeManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -756,6 +810,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEBCCEEF2BF09F7E0041657F /* ThemeDataRepository.swift in Sources */,
+				CEBCCF292BF0FB710041657F /* EmployeesDataRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -905,8 +960,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -914,9 +969,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "erkhaan.employee-list";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = "Debug-prod";
 		};
@@ -998,8 +1056,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1007,9 +1065,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "erkhaan.employee-list";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = "Debug-stag";
 		};
@@ -1083,8 +1144,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1092,9 +1153,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "erkhaan.employee-list";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = "Release-prod";
 		};
@@ -1168,8 +1232,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1177,9 +1241,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "erkhaan.employee-list";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = "Release-stag";
 		};
@@ -2283,8 +2350,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2292,9 +2359,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "erkhaan.employee-list";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = "Debug-dev";
 		};
@@ -2312,8 +2382,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2321,9 +2391,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "erkhaan.employee-list";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = "Release-dev";
 		};
@@ -3355,7 +3428,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = "Release-dev";
 		};
-		CEBCCEE52BF004E80041657F /* Build configuration list for PBXNativeTarget "DataTests" */ = {
+		CEBCCEE52BF004E80041657F /* Build configuration list for PBXNativeTarget "DataLayerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CEBCCEE62BF004E80041657F /* Debug-dev */,
@@ -3465,6 +3538,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CEBCCF092BF0DDD90041657F /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = "RxSwift-Dynamic";
+		};
+		CEBCCF2F2BF0FF780041657F /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CEBCCF092BF0DDD90041657F /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

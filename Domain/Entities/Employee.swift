@@ -8,9 +8,15 @@
 import Foundation
 
 public final class Employee {
-  let id: Int
+  public let id: Int
+  public let name: String
+  public let dateOfBirth: Date
+  public let dateOfEmployment: Date
   
-  public init(id: Int) {
+  public init(id: Int, name: String, dateOfBirth: Date, dateOfEmployment: Date) {
     self.id = id
+    self.name = name
+    self.dateOfBirth = dateOfBirth
+    self.dateOfEmployment = dateOfEmployment
   }
 }
