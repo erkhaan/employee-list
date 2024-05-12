@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		CE19E86B2BEFD149002273EA /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = CE19E86A2BEFD149002273EA /* FirebaseAnalytics */; };
 		CE19E86D2BEFD149002273EA /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = CE19E86C2BEFD149002273EA /* FirebaseCrashlytics */; };
-		CE19E87E2BEFFADA002273EA /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE19E87D2BEFFADA002273EA /* SettingsViewController.swift */; };
 		CE19E8812BEFFC6A002273EA /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = CE19E8802BEFFC6A002273EA /* SnapKit */; };
 		CE19E8832BEFFC6A002273EA /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = CE19E8822BEFFC6A002273EA /* SnapKit-Dynamic */; };
 		CE19E8912BEFFFBD002273EA /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE19E8892BEFFFBC002273EA /* Domain.framework */; };
@@ -19,10 +18,6 @@
 		CE19E8AF2BF00119002273EA /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE19E8AE2BF00119002273EA /* Employee.swift */; };
 		CE3E2E2E2BEF4EE200FB2230 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E2E2D2BEF4EE200FB2230 /* AppDelegate.swift */; };
 		CE3E2E302BEF4EE200FB2230 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E2E2F2BEF4EE200FB2230 /* SceneDelegate.swift */; };
-		CE3E2E322BEF4EE200FB2230 /* EmployeesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E2E312BEF4EE200FB2230 /* EmployeesViewController.swift */; };
-		CE3E2E352BEF4EE200FB2230 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = CE3E2E342BEF4EE200FB2230 /* Base */; };
-		CE3E2E372BEF4EE300FB2230 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE3E2E362BEF4EE300FB2230 /* Assets.xcassets */; };
-		CE3E2E3A2BEF4EE300FB2230 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = CE3E2E392BEF4EE300FB2230 /* Base */; };
 		CEBCCED02BF004E80041657F /* DataLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEBCCEC82BF004E80041657F /* DataLayer.framework */; };
 		CEBCCED72BF004E80041657F /* DataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBCCED62BF004E80041657F /* DataTests.swift */; };
 		CEBCCED82BF004E80041657F /* DataLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = CEBCCECA2BF004E80041657F /* DataLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -31,11 +26,9 @@
 		CEBCCEEF2BF09F7E0041657F /* ThemeDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBCCEEE2BF09F7E0041657F /* ThemeDataRepository.swift */; };
 		CEBCCEF22BF0BCE30041657F /* ThemeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBCCEF12BF0BCE30041657F /* ThemeType.swift */; };
 		CEBCCEF82BF0BE7A0041657F /* ThemeRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBCCEF72BF0BE7A0041657F /* ThemeRepositoryProtocol.swift */; };
-		CEBCCEFC2BF0BFC10041657F /* SettingsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBCCEFA2BF0BEE20041657F /* SettingsPresenter.swift */; };
 		CEBCCEFF2BF0C0190041657F /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBCCEFE2BF0C0190041657F /* DIContainer.swift */; };
 		CEBCCF022BF0C0740041657F /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = CEBCCF012BF0C0740041657F /* Swinject */; };
 		CEBCCF042BF0C0740041657F /* Swinject-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = CEBCCF032BF0C0740041657F /* Swinject-Dynamic */; };
-		CEBCCF082BF0C3A90041657F /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBCCF072BF0C3A90041657F /* ThemeManager.swift */; };
 		CEBCCF0B2BF0DDD90041657F /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CEBCCF0A2BF0DDD90041657F /* RxSwift */; };
 		CEBCCF0D2BF0DDD90041657F /* RxSwift-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = CEBCCF0C2BF0DDD90041657F /* RxSwift-Dynamic */; };
 		CEBCCF0F2BF0DE170041657F /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CEBCCF0E2BF0DE170041657F /* RxSwift */; };
@@ -47,14 +40,25 @@
 		CEBCCF242BF0F7040041657F /* GetThemeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBCCF232BF0F7040041657F /* GetThemeUseCase.swift */; };
 		CEBCCF262BF0F73F0041657F /* GetThemeUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBCCF252BF0F73F0041657F /* GetThemeUseCaseImpl.swift */; };
 		CEBCCF292BF0FB710041657F /* EmployeesDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBCCF282BF0FB710041657F /* EmployeesDataRepository.swift */; };
-		CEBCCF2E2BF0FEA60041657F /* EmployeesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBCCF2C2BF0FDC20041657F /* EmployeesViewModel.swift */; };
 		CEBCCF302BF0FF780041657F /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = CEBCCF2F2BF0FF780041657F /* RxCocoa */; };
-		CEBCCF342BF104FC0041657F /* EmployeeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBCCF322BF104C20041657F /* EmployeeTableViewCell.swift */; };
-		CEBCCF372BF108F40041657F /* EmployeeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBCCF352BF108980041657F /* EmployeeViewModel.swift */; };
 		CEBCCF3A2BF111460041657F /* DateFormatter+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBCCF392BF111460041657F /* DateFormatter+Ext.swift */; };
 		CEBCCF3D2BF114F70041657F /* GetEmployeesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBCCF3C2BF114F70041657F /* GetEmployeesUseCase.swift */; };
 		CEBCCF3F2BF115F90041657F /* GetEmployeesUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBCCF3E2BF115F90041657F /* GetEmployeesUseCaseImpl.swift */; };
 		CEBCCF422BF116520041657F /* EmployeeRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBCCF412BF116520041657F /* EmployeeRepositoryProtocol.swift */; };
+		CEBCCF442BF120CF0041657F /* SortType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBCCF432BF120CF0041657F /* SortType.swift */; };
+		CEBCCF472BF12C4D0041657F /* SortEmployeesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBCCF462BF12C4D0041657F /* SortEmployeesUseCase.swift */; };
+		CEBCCF4A2BF12CC60041657F /* EmployeeSortingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBCCF492BF12CC60041657F /* EmployeeSortingService.swift */; };
+		CEBCCF4C2BF12E7C0041657F /* SortEmployeesUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBCCF4B2BF12E7C0041657F /* SortEmployeesUseCaseImpl.swift */; };
+		CEBCCF602BF142560041657F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEBCCF4D2BF142560041657F /* Assets.xcassets */; };
+		CEBCCF612BF142560041657F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEBCCF4F2BF142560041657F /* LaunchScreen.storyboard */; };
+		CEBCCF622BF142560041657F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEBCCF512BF142560041657F /* Main.storyboard */; };
+		CEBCCF632BF142560041657F /* EmployeesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBCCF532BF142560041657F /* EmployeesViewController.swift */; };
+		CEBCCF642BF142560041657F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBCCF542BF142560041657F /* SettingsViewController.swift */; };
+		CEBCCF652BF142560041657F /* SettingsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBCCF562BF142560041657F /* SettingsPresenter.swift */; };
+		CEBCCF662BF142560041657F /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBCCF582BF142560041657F /* ThemeManager.swift */; };
+		CEBCCF672BF142560041657F /* EmployeesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBCCF5A2BF142560041657F /* EmployeesViewModel.swift */; };
+		CEBCCF682BF142560041657F /* EmployeeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBCCF5B2BF142560041657F /* EmployeeViewModel.swift */; };
+		CEBCCF692BF142560041657F /* EmployeeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBCCF5D2BF142560041657F /* EmployeeTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,7 +131,6 @@
 		CE19E8772BEFD9F3002273EA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CE19E8792BEFD9FA002273EA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CE19E87B2BEFDB1C002273EA /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		CE19E87D2BEFFADA002273EA /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		CE19E8892BEFFFBC002273EA /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE19E88B2BEFFFBC002273EA /* Domain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Domain.h; sourceTree = "<group>"; };
 		CE19E8902BEFFFBD002273EA /* DomainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DomainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -136,10 +139,6 @@
 		CE3E2E2A2BEF4EE200FB2230 /* employee-list.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "employee-list.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE3E2E2D2BEF4EE200FB2230 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE3E2E2F2BEF4EE200FB2230 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CE3E2E312BEF4EE200FB2230 /* EmployeesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesViewController.swift; sourceTree = "<group>"; };
-		CE3E2E342BEF4EE200FB2230 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		CE3E2E362BEF4EE300FB2230 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CE3E2E392BEF4EE300FB2230 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE3E2E3B2BEF4EE300FB2230 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEBCCEC82BF004E80041657F /* DataLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DataLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEBCCECA2BF004E80041657F /* DataLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataLayer.h; sourceTree = "<group>"; };
@@ -148,21 +147,30 @@
 		CEBCCEEE2BF09F7E0041657F /* ThemeDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeDataRepository.swift; sourceTree = "<group>"; };
 		CEBCCEF12BF0BCE30041657F /* ThemeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeType.swift; sourceTree = "<group>"; };
 		CEBCCEF72BF0BE7A0041657F /* ThemeRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeRepositoryProtocol.swift; sourceTree = "<group>"; };
-		CEBCCEFA2BF0BEE20041657F /* SettingsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPresenter.swift; sourceTree = "<group>"; };
 		CEBCCEFE2BF0C0190041657F /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
-		CEBCCF072BF0C3A90041657F /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
 		CEBCCF1B2BF0E6DF0041657F /* ChangeThemeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeThemeUseCase.swift; sourceTree = "<group>"; };
 		CEBCCF212BF0E9D80041657F /* ChangeThemeUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeThemeUseCaseImpl.swift; sourceTree = "<group>"; };
 		CEBCCF232BF0F7040041657F /* GetThemeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetThemeUseCase.swift; sourceTree = "<group>"; };
 		CEBCCF252BF0F73F0041657F /* GetThemeUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetThemeUseCaseImpl.swift; sourceTree = "<group>"; };
 		CEBCCF282BF0FB710041657F /* EmployeesDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesDataRepository.swift; sourceTree = "<group>"; };
-		CEBCCF2C2BF0FDC20041657F /* EmployeesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesViewModel.swift; sourceTree = "<group>"; };
-		CEBCCF322BF104C20041657F /* EmployeeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeTableViewCell.swift; sourceTree = "<group>"; };
-		CEBCCF352BF108980041657F /* EmployeeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeViewModel.swift; sourceTree = "<group>"; };
 		CEBCCF392BF111460041657F /* DateFormatter+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Ext.swift"; sourceTree = "<group>"; };
 		CEBCCF3C2BF114F70041657F /* GetEmployeesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetEmployeesUseCase.swift; sourceTree = "<group>"; };
 		CEBCCF3E2BF115F90041657F /* GetEmployeesUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetEmployeesUseCaseImpl.swift; sourceTree = "<group>"; };
 		CEBCCF412BF116520041657F /* EmployeeRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeRepositoryProtocol.swift; sourceTree = "<group>"; };
+		CEBCCF432BF120CF0041657F /* SortType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortType.swift; sourceTree = "<group>"; };
+		CEBCCF462BF12C4D0041657F /* SortEmployeesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortEmployeesUseCase.swift; sourceTree = "<group>"; };
+		CEBCCF492BF12CC60041657F /* EmployeeSortingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeSortingService.swift; sourceTree = "<group>"; };
+		CEBCCF4B2BF12E7C0041657F /* SortEmployeesUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortEmployeesUseCaseImpl.swift; sourceTree = "<group>"; };
+		CEBCCF4D2BF142560041657F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CEBCCF4E2BF142560041657F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CEBCCF502BF142560041657F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CEBCCF532BF142560041657F /* EmployeesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeesViewController.swift; sourceTree = "<group>"; };
+		CEBCCF542BF142560041657F /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		CEBCCF562BF142560041657F /* SettingsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsPresenter.swift; sourceTree = "<group>"; };
+		CEBCCF582BF142560041657F /* ThemeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
+		CEBCCF5A2BF142560041657F /* EmployeesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeesViewModel.swift; sourceTree = "<group>"; };
+		CEBCCF5B2BF142560041657F /* EmployeeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeViewModel.swift; sourceTree = "<group>"; };
+		CEBCCF5D2BF142560041657F /* EmployeeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,20 +241,6 @@
 			path = Application;
 			sourceTree = "<group>";
 		};
-		CE19E85E2BEF4FC3002273EA /* Presentation */ = {
-			isa = PBXGroup;
-			children = (
-				CEBCCF312BF104B50041657F /* Views */,
-				CEBCCF2A2BF0FC770041657F /* Common */,
-				CEBCCF052BF0C3980041657F /* Utilities */,
-				CEBCCF2B2BF0FDA90041657F /* ViewModels */,
-				CE19E87C2BEFFACC002273EA /* Controllers */,
-				CEBCCEF92BF0BED70041657F /* Presenters */,
-			);
-			name = Presentation;
-			path = "employee-list/Presentation";
-			sourceTree = "<group>";
-		};
 		CE19E8712BEFD279002273EA /* dev */ = {
 			isa = PBXGroup;
 			children = (
@@ -281,18 +275,10 @@
 			path = Firebase;
 			sourceTree = "<group>";
 		};
-		CE19E87C2BEFFACC002273EA /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				CE3E2E312BEF4EE200FB2230 /* EmployeesViewController.swift */,
-				CE19E87D2BEFFADA002273EA /* SettingsViewController.swift */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
 		CE19E88A2BEFFFBC002273EA /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				CEBCCF482BF12CBA0041657F /* Services */,
 				CEBCCF162BF0E63F0041657F /* UseCases */,
 				CEBCCEF52BF0BE260041657F /* Interfaces */,
 				CE19E8AD2BF00109002273EA /* Entities */,
@@ -314,6 +300,7 @@
 			children = (
 				CE19E8AE2BF00119002273EA /* Employee.swift */,
 				CEBCCEF12BF0BCE30041657F /* ThemeType.swift */,
+				CEBCCF432BF120CF0041657F /* SortType.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -322,7 +309,7 @@
 			isa = PBXGroup;
 			children = (
 				CE3E2E2C2BEF4EE200FB2230 /* employee-list */,
-				CE19E85E2BEF4FC3002273EA /* Presentation */,
+				CEBCCF5F2BF142560041657F /* Presentation */,
 				CE19E88A2BEFFFBC002273EA /* Domain */,
 				CE19E8962BEFFFBD002273EA /* DomainTests */,
 				CEBCCEC92BF004E80041657F /* DataLayer */,
@@ -403,14 +390,6 @@
 			path = Repositories;
 			sourceTree = "<group>";
 		};
-		CEBCCEF92BF0BED70041657F /* Presenters */ = {
-			isa = PBXGroup;
-			children = (
-				CEBCCEFA2BF0BEE20041657F /* SettingsPresenter.swift */,
-			);
-			path = Presenters;
-			sourceTree = "<group>";
-		};
 		CEBCCEFD2BF0C00F0041657F /* DI */ = {
 			isa = PBXGroup;
 			children = (
@@ -419,17 +398,10 @@
 			path = DI;
 			sourceTree = "<group>";
 		};
-		CEBCCF052BF0C3980041657F /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-				CEBCCF072BF0C3A90041657F /* ThemeManager.swift */,
-			);
-			path = Utilities;
-			sourceTree = "<group>";
-		};
 		CEBCCF162BF0E63F0041657F /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				CEBCCF452BF12C430041657F /* Sort */,
 				CEBCCF3B2BF114E50041657F /* Employees */,
 				CEBCCF172BF0E6520041657F /* Theme */,
 			);
@@ -453,33 +425,6 @@
 				CEBCCEF72BF0BE7A0041657F /* ThemeRepositoryProtocol.swift */,
 			);
 			path = Theme;
-			sourceTree = "<group>";
-		};
-		CEBCCF2A2BF0FC770041657F /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				CE3E2E332BEF4EE200FB2230 /* Main.storyboard */,
-				CE3E2E362BEF4EE300FB2230 /* Assets.xcassets */,
-				CE3E2E382BEF4EE300FB2230 /* LaunchScreen.storyboard */,
-			);
-			path = Common;
-			sourceTree = "<group>";
-		};
-		CEBCCF2B2BF0FDA90041657F /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-				CEBCCF2C2BF0FDC20041657F /* EmployeesViewModel.swift */,
-				CEBCCF352BF108980041657F /* EmployeeViewModel.swift */,
-			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
-		CEBCCF312BF104B50041657F /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				CEBCCF322BF104C20041657F /* EmployeeTableViewCell.swift */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		CEBCCF382BF1113C0041657F /* Utilities */ = {
@@ -506,6 +451,88 @@
 			);
 			path = Employees;
 			sourceTree = "<group>";
+		};
+		CEBCCF452BF12C430041657F /* Sort */ = {
+			isa = PBXGroup;
+			children = (
+				CEBCCF462BF12C4D0041657F /* SortEmployeesUseCase.swift */,
+				CEBCCF4B2BF12E7C0041657F /* SortEmployeesUseCaseImpl.swift */,
+			);
+			path = Sort;
+			sourceTree = "<group>";
+		};
+		CEBCCF482BF12CBA0041657F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CEBCCF492BF12CC60041657F /* EmployeeSortingService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		CEBCCF522BF142560041657F /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				CEBCCF4D2BF142560041657F /* Assets.xcassets */,
+				CEBCCF4F2BF142560041657F /* LaunchScreen.storyboard */,
+				CEBCCF512BF142560041657F /* Main.storyboard */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		CEBCCF552BF142560041657F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CEBCCF532BF142560041657F /* EmployeesViewController.swift */,
+				CEBCCF542BF142560041657F /* SettingsViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		CEBCCF572BF142560041657F /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				CEBCCF562BF142560041657F /* SettingsPresenter.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		CEBCCF592BF142560041657F /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				CEBCCF582BF142560041657F /* ThemeManager.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		CEBCCF5C2BF142560041657F /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				CEBCCF5A2BF142560041657F /* EmployeesViewModel.swift */,
+				CEBCCF5B2BF142560041657F /* EmployeeViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		CEBCCF5E2BF142560041657F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CEBCCF5D2BF142560041657F /* EmployeeTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CEBCCF5F2BF142560041657F /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				CEBCCF522BF142560041657F /* Common */,
+				CEBCCF552BF142560041657F /* Controllers */,
+				CEBCCF572BF142560041657F /* Presenters */,
+				CEBCCF592BF142560041657F /* Utilities */,
+				CEBCCF5C2BF142560041657F /* ViewModels */,
+				CEBCCF5E2BF142560041657F /* Views */,
+			);
+			path = Presentation;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -723,9 +750,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE3E2E372BEF4EE300FB2230 /* Assets.xcassets in Resources */,
-				CE3E2E3A2BEF4EE300FB2230 /* Base in Resources */,
-				CE3E2E352BEF4EE200FB2230 /* Base in Resources */,
+				CEBCCF602BF142560041657F /* Assets.xcassets in Resources */,
+				CEBCCF622BF142560041657F /* Main.storyboard in Resources */,
+				CEBCCF612BF142560041657F /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -795,10 +822,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEBCCF3D2BF114F70041657F /* GetEmployeesUseCase.swift in Sources */,
+				CEBCCF472BF12C4D0041657F /* SortEmployeesUseCase.swift in Sources */,
 				CE19E8AF2BF00119002273EA /* Employee.swift in Sources */,
+				CEBCCF4A2BF12CC60041657F /* EmployeeSortingService.swift in Sources */,
 				CEBCCF422BF116520041657F /* EmployeeRepositoryProtocol.swift in Sources */,
+				CEBCCF4C2BF12E7C0041657F /* SortEmployeesUseCaseImpl.swift in Sources */,
 				CEBCCF222BF0E9D80041657F /* ChangeThemeUseCaseImpl.swift in Sources */,
 				CEBCCF1C2BF0E6DF0041657F /* ChangeThemeUseCase.swift in Sources */,
+				CEBCCF442BF120CF0041657F /* SortType.swift in Sources */,
 				CEBCCF262BF0F73F0041657F /* GetThemeUseCaseImpl.swift in Sources */,
 				CEBCCEF82BF0BE7A0041657F /* ThemeRepositoryProtocol.swift in Sources */,
 				CEBCCF242BF0F7040041657F /* GetThemeUseCase.swift in Sources */,
@@ -819,17 +850,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE3E2E322BEF4EE200FB2230 /* EmployeesViewController.swift in Sources */,
 				CE3E2E2E2BEF4EE200FB2230 /* AppDelegate.swift in Sources */,
-				CEBCCF2E2BF0FEA60041657F /* EmployeesViewModel.swift in Sources */,
+				CEBCCF672BF142560041657F /* EmployeesViewModel.swift in Sources */,
+				CEBCCF662BF142560041657F /* ThemeManager.swift in Sources */,
+				CEBCCF632BF142560041657F /* EmployeesViewController.swift in Sources */,
+				CEBCCF692BF142560041657F /* EmployeeTableViewCell.swift in Sources */,
 				CEBCCF3A2BF111460041657F /* DateFormatter+Ext.swift in Sources */,
 				CE3E2E302BEF4EE200FB2230 /* SceneDelegate.swift in Sources */,
-				CE19E87E2BEFFADA002273EA /* SettingsViewController.swift in Sources */,
-				CEBCCF342BF104FC0041657F /* EmployeeTableViewCell.swift in Sources */,
 				CEBCCEFF2BF0C0190041657F /* DIContainer.swift in Sources */,
-				CEBCCEFC2BF0BFC10041657F /* SettingsPresenter.swift in Sources */,
-				CEBCCF372BF108F40041657F /* EmployeeViewModel.swift in Sources */,
-				CEBCCF082BF0C3A90041657F /* ThemeManager.swift in Sources */,
+				CEBCCF682BF142560041657F /* EmployeeViewModel.swift in Sources */,
+				CEBCCF642BF142560041657F /* SettingsViewController.swift in Sources */,
+				CEBCCF652BF142560041657F /* SettingsPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -891,20 +922,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		CE3E2E332BEF4EE200FB2230 /* Main.storyboard */ = {
+		CEBCCF4F2BF142560041657F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				CE3E2E342BEF4EE200FB2230 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		CE3E2E382BEF4EE300FB2230 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CE3E2E392BEF4EE300FB2230 /* Base */,
+				CEBCCF4E2BF142560041657F /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		CEBCCF512BF142560041657F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CEBCCF502BF142560041657F /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -2373,6 +2404,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 2R782SXW3H;
+				ENABLE_TESTABILITY = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "employee-list/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -2492,7 +2524,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2584,7 +2616,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2676,7 +2708,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2762,7 +2794,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2847,7 +2879,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2932,7 +2964,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -3016,7 +3048,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MARKETING_VERSION = 1.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -3091,7 +3123,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MARKETING_VERSION = 1.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -3166,7 +3198,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MARKETING_VERSION = 1.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -3235,7 +3267,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MARKETING_VERSION = 1.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -3303,7 +3335,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MARKETING_VERSION = 1.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -3371,7 +3403,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MARKETING_VERSION = 1.0;
 				MTL_ENABLE_DEBUG_INFO = NO;

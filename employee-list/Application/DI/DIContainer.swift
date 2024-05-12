@@ -40,6 +40,10 @@ final class DIContainer {
       return GetEmployeesUseCaseImpl(
         repository: r.resolve(EmployeesRepositoryProtocol.self)!)
     }.inObjectScope(.container)
+
+    container.register(SortEmployeesUseCase.self) { _ in
+      return SortEmployeesUseCaseImpl()
+    }.inObjectScope(.container)
     
     return container
   }()

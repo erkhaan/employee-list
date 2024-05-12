@@ -60,7 +60,7 @@ final class EmployeesViewController: UIViewController {
       EmployeeTableViewCell.self,
       forCellReuseIdentifier: EmployeeTableViewCell.reuseIdentifier)
     view.addSubview(tableView)
-    viewModel.employees
+    viewModel.employeesViewModelSubject
       .bind(to: tableView.rx.items) { tableView, row, viewModel in
         let cell = tableView.dequeueReusableCell(withIdentifier: EmployeeTableViewCell.reuseIdentifier, for: IndexPath(row: row, section: 0)) as! EmployeeTableViewCell
         cell.configure(with: viewModel)
@@ -76,16 +76,27 @@ final class EmployeesViewController: UIViewController {
   // MARK: - Actions
   
   @objc func sortButtonTapped() {
-    print("sorting...")
-    let alertController = UIAlertController(title: "Sort By", message: nil, preferredStyle: .actionSheet)
+    let alertController = UIAlertController(
+      title: "Sort By",
+      message: nil,
+      preferredStyle: .actionSheet)
     
     for sortType in SortType.allCases {
-      alertController.addAction(UIAlertAction(title: sortType.rawValue.capitalized, style: .default, handler: { [weak self] _ in
-        //                self?.viewModel?.selectSortType(sortType)
-      }))
+      alertController.addAction(
+        UIAlertAction(
+          title: sortType.rawValue.capitalized,
+          style: .default,
+          handler: { [weak self] _ in
+            self?.viewModel.selectedSortType(sortType)
+          })
+      )
     }
     
-    alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+    alertController.addAction(
+      UIAlertAction(
+        title: "Cancel",
+        style: .cancel,
+        handler: nil))
     
     present(alertController, animated: true, completion: nil)
   }
@@ -110,7 +121,8 @@ extension EmployeesViewController: UITableViewDelegate {
   
   func tableView(
     _ tableView: UITableView,
-    estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-      return 150.0
-    }
+    estimatedHeightForRowAt indexPath: IndexPath
+  ) -> CGFloat {
+    return 150.0
+  }
 }
