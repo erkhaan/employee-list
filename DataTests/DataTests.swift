@@ -22,6 +22,7 @@ final class DataTests: XCTestCase {
   
   override func tearDownWithError() throws {
     themeRepository = nil
+    disposeBag = nil
   }
   
   func testInitialTheme() throws {
