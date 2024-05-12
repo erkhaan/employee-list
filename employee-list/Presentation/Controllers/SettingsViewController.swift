@@ -10,14 +10,31 @@ import SnapKit
 
 final class SettingsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
   
+  // MARK: - Properties
+  
   var tableView: UITableView!
   let crashCellIdentifier = "CrashCell"
   let modeCellIdentifier = "ModeCell"
+  private let presenter: SettingsPresenter
+  
+  // MARK: - Init
+  
+  init() {
+    self.presenter = SettingsPresenter()
+    super.init(nibName: nil, bundle: nil)
+  }
+  
+  required init?(coder aDecoder: NSCoder) {
+    fatalError("init(coder:) has not been implemented")
+  }
+  
+  // MARK: - VC lifecycle
   
   override func viewDidLoad() {
     super.viewDidLoad()
     setupViews()
   }
+  
   // MARK: - Setup UI
   
   private func setupViews() {
@@ -57,7 +74,15 @@ final class SettingsViewController: UIViewController, UITableViewDataSource, UIT
     } else {
       let cell = tableView.dequeueReusableCell(withIdentifier: modeCellIdentifier, for: indexPath)
       let modeSwitch = UISwitch()
-      modeSwitch.addTarget(self, action: #selector(modeSwitchValueChanged), for: .valueChanged)
+      modeSwitch.addTarget(
+        self,
+        action: #selector(modeSwitchValueChanged),
+        for: .valueChanged)
+      if presenter.themeType == .DARK {
+        modeSwitch.isOn = true
+      } else {
+        modeSwitch.isOn = false
+      }
       cell.accessoryView = modeSwitch
       cell.textLabel?.text = "Dark Mode"
       return cell
