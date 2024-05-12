@@ -8,6 +8,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import Domain
 
 final class EmployeesViewController: UIViewController {
   
@@ -37,6 +38,17 @@ final class EmployeesViewController: UIViewController {
       style: .plain,
       target: self,
       action: #selector(settingsButtonTapped))
+    let sortButton = UIBarButtonItem(
+      image: UIImage(systemName: "arrow.up.arrow.down"),
+      style: .plain,
+      target: self,
+      action: #selector(sortButtonTapped))
+    let filterButton = UIBarButtonItem(
+      image: UIImage(systemName: "line.horizontal.3.decrease.circle"),
+      style: .plain,
+      target: self,
+      action: #selector(filterButtonTapped))
+    navigationItem.leftBarButtonItems = [filterButton, sortButton]
     navigationItem.rightBarButtonItem = settingsButton
     navigationItem.title = "Employees List"
   }
@@ -63,6 +75,25 @@ final class EmployeesViewController: UIViewController {
   }
   
   // MARK: - Actions
+  
+  @objc func sortButtonTapped() {
+    print("sorting...")
+    let alertController = UIAlertController(title: "Sort By", message: nil, preferredStyle: .actionSheet)
+    
+    for sortType in SortType.allCases {
+      alertController.addAction(UIAlertAction(title: sortType.rawValue.capitalized, style: .default, handler: { [weak self] _ in
+        //                self?.viewModel?.selectSortType(sortType)
+      }))
+    }
+    
+    alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+    
+    present(alertController, animated: true, completion: nil)
+  }
+  
+  @objc func filterButtonTapped() {
+    print("filtering...")
+  }
   
   @objc func settingsButtonTapped() {
     let vc = SettingsViewController()
