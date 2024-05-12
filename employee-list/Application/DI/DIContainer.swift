@@ -17,6 +17,9 @@ final class DIContainer {
     container.register(ThemeRepositoryProtocol.self) { _ in
       return ThemeDataRepository()
     }.inObjectScope(.container)
+    container.register(ChangeThemeUseCase.self) { r in
+      return ChangeThemeUseCaseImpl(repository: r.resolve(ThemeRepositoryProtocol.self)!)
+    }.inObjectScope(.container)
     
     return container
   }()

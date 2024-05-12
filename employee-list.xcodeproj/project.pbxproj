@@ -42,6 +42,8 @@
 		CEBCCF112BF0DE170041657F /* RxSwift-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = CEBCCF102BF0DE170041657F /* RxSwift-Dynamic */; };
 		CEBCCF132BF0DF1B0041657F /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CEBCCF122BF0DF1B0041657F /* RxSwift */; };
 		CEBCCF152BF0DF1B0041657F /* RxSwift-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = CEBCCF142BF0DF1B0041657F /* RxSwift-Dynamic */; };
+		CEBCCF1C2BF0E6DF0041657F /* ChangeThemeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBCCF1B2BF0E6DF0041657F /* ChangeThemeUseCase.swift */; };
+		CEBCCF222BF0E9D80041657F /* ChangeThemeUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBCCF212BF0E9D80041657F /* ChangeThemeUseCaseImpl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -138,6 +140,8 @@
 		CEBCCEFA2BF0BEE20041657F /* SettingsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPresenter.swift; sourceTree = "<group>"; };
 		CEBCCEFE2BF0C0190041657F /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
 		CEBCCF072BF0C3A90041657F /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
+		CEBCCF1B2BF0E6DF0041657F /* ChangeThemeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeThemeUseCase.swift; sourceTree = "<group>"; };
+		CEBCCF212BF0E9D80041657F /* ChangeThemeUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeThemeUseCaseImpl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -266,6 +270,7 @@
 		CE19E88A2BEFFFBC002273EA /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				CEBCCF162BF0E63F0041657F /* UseCases */,
 				CEBCCEF52BF0BE260041657F /* Interfaces */,
 				CE19E8AD2BF00109002273EA /* Entities */,
 				CE19E88B2BEFFFBC002273EA /* Domain.h */,
@@ -297,7 +302,7 @@
 				CE19E85E2BEF4FC3002273EA /* Presentation */,
 				CE19E88A2BEFFFBC002273EA /* Domain */,
 				CE19E8962BEFFFBD002273EA /* DomainTests */,
-				CEBCCEC92BF004E80041657F /* Data */,
+				CEBCCEC92BF004E80041657F /* DataLayer */,
 				CEBCCED52BF004E80041657F /* DataTests */,
 				CE3E2E2B2BEF4EE200FB2230 /* Products */,
 			);
@@ -324,13 +329,13 @@
 			path = "employee-list";
 			sourceTree = "<group>";
 		};
-		CEBCCEC92BF004E80041657F /* Data */ = {
+		CEBCCEC92BF004E80041657F /* DataLayer */ = {
 			isa = PBXGroup;
 			children = (
 				CEBCCEED2BF09F640041657F /* Storage */,
 				CEBCCECA2BF004E80041657F /* Data.h */,
 			);
-			path = Data;
+			path = DataLayer;
 			sourceTree = "<group>";
 		};
 		CEBCCED52BF004E80041657F /* DataTests */ = {
@@ -368,7 +373,7 @@
 		CEBCCEF62BF0BE2B0041657F /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
-				CEBCCEF72BF0BE7A0041657F /* ThemeRepositoryProtocol.swift */,
+				CEBCCF182BF0E6590041657F /* Theme */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -395,6 +400,31 @@
 				CEBCCF072BF0C3A90041657F /* ThemeManager.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		CEBCCF162BF0E63F0041657F /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				CEBCCF172BF0E6520041657F /* Theme */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		CEBCCF172BF0E6520041657F /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				CEBCCF1B2BF0E6DF0041657F /* ChangeThemeUseCase.swift */,
+				CEBCCF212BF0E9D80041657F /* ChangeThemeUseCaseImpl.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		CEBCCF182BF0E6590041657F /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				CEBCCEF72BF0BE7A0041657F /* ThemeRepositoryProtocol.swift */,
+			);
+			path = Theme;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -684,6 +714,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE19E8AF2BF00119002273EA /* Employee.swift in Sources */,
+				CEBCCF222BF0E9D80041657F /* ChangeThemeUseCaseImpl.swift in Sources */,
+				CEBCCF1C2BF0E6DF0041657F /* ChangeThemeUseCase.swift in Sources */,
 				CEBCCEF82BF0BE7A0041657F /* ThemeRepositoryProtocol.swift in Sources */,
 				CEBCCEF22BF0BCE30041657F /* ThemeType.swift in Sources */,
 			);

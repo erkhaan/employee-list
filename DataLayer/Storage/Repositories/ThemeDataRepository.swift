@@ -26,7 +26,7 @@ extension ThemeDataRepository: ThemeRepositoryProtocol {
     themeType
   }
   
-  public func changeTheme(with newType: ThemeType) {
+  public func setTheme(with newType: ThemeType) {
     themeType = newType
     let newValue = themeType == .DARK ? true : false
     isDarkThemeSubject.onNext(newValue)

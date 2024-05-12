@@ -10,6 +10,7 @@ import Domain
 import Swinject
 
 final class SettingsPresenter {
+  private let changeThemeUseCase: ChangeThemeUseCase
   private let themeRepository: ThemeRepositoryProtocol
   
   var isDarkTheme: Bool {
@@ -17,11 +18,13 @@ final class SettingsPresenter {
   }
   
   init() {
-    self.themeRepository = DIContainer.shared.resolve(ThemeRepositoryProtocol.self)!
+    let container = DIContainer.shared
+    self.changeThemeUseCase = container.resolve(ChangeThemeUseCase.self)!
+    self.themeRepository = container.resolve(ThemeRepositoryProtocol.self)!
   }
   
   func changeTheme(isDarkEnabled: Bool) {
     let newType: ThemeType = isDarkEnabled == true ? .DARK : .LIGHT
-    themeRepository.changeTheme(with: newType)
+    changeThemeUseCase.changeTheme(with: newType)
   }
 }

@@ -12,7 +12,6 @@ import UIKit
 import RxSwift
 
 final class ThemeManager {
-  
   private let themeRepository: ThemeRepositoryProtocol
   private let disposeBag = DisposeBag()
   static let shared = ThemeManager()
@@ -29,7 +28,7 @@ final class ThemeManager {
     }.disposed(by: disposeBag)
   }
   
-  func toggleTheme(_ isDarkTheme: Bool) {
+  private func toggleTheme(_ isDarkTheme: Bool) {
     let window = UIApplication
       .shared
       .connectedScenes

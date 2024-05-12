@@ -9,6 +9,6 @@ import RxSwift
 
 public protocol ThemeRepositoryProtocol {
   var getTheme: ThemeType { get }
-  func changeTheme(with newType: ThemeType)
   var isDarkTheme: Observable<Bool> { get }
+  func setTheme(with newType: ThemeType)
 }
