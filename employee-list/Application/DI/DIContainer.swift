@@ -20,6 +20,10 @@ final class DIContainer {
       return ThemeDataRepository()
     }.inObjectScope(.container)
     
+    container.register(EmployeesRepositoryProtocol.self) { _ in
+      return EmployeesDataRepository()
+    }.inObjectScope(.container)
+    
     // MARK: - UseCases
     
     container.register(GetThemeUseCase.self) { r in
@@ -30,6 +34,11 @@ final class DIContainer {
     container.register(ChangeThemeUseCase.self) { r in
       return ChangeThemeUseCaseImpl(
         repository: r.resolve(ThemeRepositoryProtocol.self)!)
+    }.inObjectScope(.container)
+    
+    container.register(GetEmployeesUseCase.self) { r in
+      return GetEmployeesUseCaseImpl(
+        repository: r.resolve(EmployeesRepositoryProtocol.self)!)
     }.inObjectScope(.container)
     
     return container
