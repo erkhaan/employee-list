@@ -7,13 +7,15 @@
 
 import Foundation
 
-final public class ChangeThemeUseCaseImpl: ChangeThemeUseCase {
+final public class ChangeThemeUseCaseImpl {
   private let repository: ThemeRepositoryProtocol
   
   public init(repository: ThemeRepositoryProtocol) {
     self.repository = repository
   }
-  
+}
+
+extension ChangeThemeUseCaseImpl: ChangeThemeUseCase {
   public func execute(themeType newType: ThemeType) {
     repository.setTheme(with: newType)
   }
