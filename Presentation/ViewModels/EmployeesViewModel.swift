@@ -19,6 +19,7 @@ final class EmployeesViewModel {
   }
   private let getEmployeesUseCase: GetEmployeesUseCase
   private let sortEmployeesUseCase: SortEmployeesUseCase
+  private let displayingEmployeesRepository: DisplayingEmployeesRepositoryProtocol
   private var employees: [Employee] = []
   private let disposeBag = DisposeBag()
   
@@ -26,14 +27,15 @@ final class EmployeesViewModel {
     let container = DIContainer.shared
     self.getEmployeesUseCase = container.resolve(GetEmployeesUseCase.self)!
     self.sortEmployeesUseCase = container.resolve(SortEmployeesUseCase.self)!
-    getEmployeesUseCase.execute().subscribe { employees in
+    self.displayingEmployeesRepository = container.resolve(DisplayingEmployeesRepositoryProtocol.self)!
+    displayingEmployeesRepository.employeesToShow.subscribe { employees in
       self.employees = employees
       self.employeesViewModelSubject.onNext(self.employeesViewModel)
     }.disposed(by: disposeBag)
   }
   
   func selectedSortType(_ type: SortType) {
-    employees = sortEmployeesUseCase.execute(sortType: type, employees: employees)
+    sortEmployeesUseCase.execute(sortType: type)
     employeesViewModelSubject.onNext(employeesViewModel)
   }
 }

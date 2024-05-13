@@ -101,11 +101,17 @@ final class EmployeesViewController: UIViewController {
     present(alertController, animated: true, completion: nil)
   }
   
-  @objc func filterButtonTapped() {
-    print("filtering...")
+  @objc private func filterButtonTapped() {
+    let vc = FilterViewController()
+    let nc = UINavigationController(rootViewController: vc)
+    nc.modalPresentationStyle = .pageSheet
+    if let sheet = nc.sheetPresentationController {
+        sheet.detents = [.medium()]
+    }
+    present(nc, animated: true)
   }
   
-  @objc func settingsButtonTapped() {
+  @objc private func settingsButtonTapped() {
     let vc = SettingsViewController()
     navigationController?.pushViewController(vc, animated: true)
   }

@@ -10,7 +10,6 @@
 		CE19E86B2BEFD149002273EA /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = CE19E86A2BEFD149002273EA /* FirebaseAnalytics */; };
 		CE19E86D2BEFD149002273EA /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = CE19E86C2BEFD149002273EA /* FirebaseCrashlytics */; };
 		CE19E8812BEFFC6A002273EA /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = CE19E8802BEFFC6A002273EA /* SnapKit */; };
-		CE19E8832BEFFC6A002273EA /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = CE19E8822BEFFC6A002273EA /* SnapKit-Dynamic */; };
 		CE19E8912BEFFFBD002273EA /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE19E8892BEFFFBC002273EA /* Domain.framework */; };
 		CE19E8982BEFFFBD002273EA /* DomainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE19E8972BEFFFBD002273EA /* DomainTests.swift */; };
 		CE19E8992BEFFFBD002273EA /* Domain.h in Headers */ = {isa = PBXBuildFile; fileRef = CE19E88B2BEFFFBC002273EA /* Domain.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -28,13 +27,9 @@
 		CEBCCEF82BF0BE7A0041657F /* ThemeRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBCCEF72BF0BE7A0041657F /* ThemeRepositoryProtocol.swift */; };
 		CEBCCEFF2BF0C0190041657F /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBCCEFE2BF0C0190041657F /* DIContainer.swift */; };
 		CEBCCF022BF0C0740041657F /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = CEBCCF012BF0C0740041657F /* Swinject */; };
-		CEBCCF042BF0C0740041657F /* Swinject-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = CEBCCF032BF0C0740041657F /* Swinject-Dynamic */; };
 		CEBCCF0B2BF0DDD90041657F /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CEBCCF0A2BF0DDD90041657F /* RxSwift */; };
-		CEBCCF0D2BF0DDD90041657F /* RxSwift-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = CEBCCF0C2BF0DDD90041657F /* RxSwift-Dynamic */; };
 		CEBCCF0F2BF0DE170041657F /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CEBCCF0E2BF0DE170041657F /* RxSwift */; };
-		CEBCCF112BF0DE170041657F /* RxSwift-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = CEBCCF102BF0DE170041657F /* RxSwift-Dynamic */; };
 		CEBCCF132BF0DF1B0041657F /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CEBCCF122BF0DF1B0041657F /* RxSwift */; };
-		CEBCCF152BF0DF1B0041657F /* RxSwift-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = CEBCCF142BF0DF1B0041657F /* RxSwift-Dynamic */; };
 		CEBCCF1C2BF0E6DF0041657F /* ChangeThemeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBCCF1B2BF0E6DF0041657F /* ChangeThemeUseCase.swift */; };
 		CEBCCF222BF0E9D80041657F /* ChangeThemeUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBCCF212BF0E9D80041657F /* ChangeThemeUseCaseImpl.swift */; };
 		CEBCCF242BF0F7040041657F /* GetThemeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBCCF232BF0F7040041657F /* GetThemeUseCase.swift */; };
@@ -48,7 +43,6 @@
 		CEBCCF442BF120CF0041657F /* SortType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBCCF432BF120CF0041657F /* SortType.swift */; };
 		CEBCCF472BF12C4D0041657F /* SortEmployeesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBCCF462BF12C4D0041657F /* SortEmployeesUseCase.swift */; };
 		CEBCCF4A2BF12CC60041657F /* EmployeeSortingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBCCF492BF12CC60041657F /* EmployeeSortingService.swift */; };
-		CEBCCF4C2BF12E7C0041657F /* SortEmployeesUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBCCF4B2BF12E7C0041657F /* SortEmployeesUseCaseImpl.swift */; };
 		CEBCCF602BF142560041657F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEBCCF4D2BF142560041657F /* Assets.xcassets */; };
 		CEBCCF612BF142560041657F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEBCCF4F2BF142560041657F /* LaunchScreen.storyboard */; };
 		CEBCCF622BF142560041657F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEBCCF512BF142560041657F /* Main.storyboard */; };
@@ -59,6 +53,16 @@
 		CEBCCF672BF142560041657F /* EmployeesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBCCF5A2BF142560041657F /* EmployeesViewModel.swift */; };
 		CEBCCF682BF142560041657F /* EmployeeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBCCF5B2BF142560041657F /* EmployeeViewModel.swift */; };
 		CEBCCF692BF142560041657F /* EmployeeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBCCF5D2BF142560041657F /* EmployeeTableViewCell.swift */; };
+		CEBCCF6F2BF177E20041657F /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBCCF6E2BF177E20041657F /* FilterViewController.swift */; };
+		CEBCCF732BF1892D0041657F /* TextFieldWithPadding.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBCCF722BF1892D0041657F /* TextFieldWithPadding.swift */; };
+		CEBCCF752BF190650041657F /* FilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBCCF742BF190650041657F /* FilterViewModel.swift */; };
+		CEBCCF782BF190FB0041657F /* FilterEmployeesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBCCF772BF190FB0041657F /* FilterEmployeesUseCase.swift */; };
+		CEBCCF7B2BF195590041657F /* DisplayingEmployeesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBCCF7A2BF195590041657F /* DisplayingEmployeesRepository.swift */; };
+		CEBCCF7D2BF1974A0041657F /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBCCF7C2BF1974A0041657F /* Filter.swift */; };
+		CEBCCF802BF19C5D0041657F /* DisplayingEmployeesRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBCCF7F2BF19C5D0041657F /* DisplayingEmployeesRepositoryProtocol.swift */; };
+		CEBCCF822BF19CDA0041657F /* SortEmployeesUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBCCF812BF19CDA0041657F /* SortEmployeesUseCaseImpl.swift */; };
+		CEBCCF842BF19FDD0041657F /* EmployeeFilteringService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBCCF832BF19FDD0041657F /* EmployeeFilteringService.swift */; };
+		CEBCCF862BF1A0C60041657F /* FilterEmployeesUseCaseImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBCCF852BF1A0C60041657F /* FilterEmployeesUseCaseImpl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +129,16 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CEBCCF712BF17E710041657F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -160,7 +174,6 @@
 		CEBCCF432BF120CF0041657F /* SortType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortType.swift; sourceTree = "<group>"; };
 		CEBCCF462BF12C4D0041657F /* SortEmployeesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortEmployeesUseCase.swift; sourceTree = "<group>"; };
 		CEBCCF492BF12CC60041657F /* EmployeeSortingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeSortingService.swift; sourceTree = "<group>"; };
-		CEBCCF4B2BF12E7C0041657F /* SortEmployeesUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortEmployeesUseCaseImpl.swift; sourceTree = "<group>"; };
 		CEBCCF4D2BF142560041657F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEBCCF4E2BF142560041657F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEBCCF502BF142560041657F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -171,6 +184,16 @@
 		CEBCCF5A2BF142560041657F /* EmployeesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeesViewModel.swift; sourceTree = "<group>"; };
 		CEBCCF5B2BF142560041657F /* EmployeeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeViewModel.swift; sourceTree = "<group>"; };
 		CEBCCF5D2BF142560041657F /* EmployeeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeTableViewCell.swift; sourceTree = "<group>"; };
+		CEBCCF6E2BF177E20041657F /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		CEBCCF722BF1892D0041657F /* TextFieldWithPadding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldWithPadding.swift; sourceTree = "<group>"; };
+		CEBCCF742BF190650041657F /* FilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewModel.swift; sourceTree = "<group>"; };
+		CEBCCF772BF190FB0041657F /* FilterEmployeesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterEmployeesUseCase.swift; sourceTree = "<group>"; };
+		CEBCCF7A2BF195590041657F /* DisplayingEmployeesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayingEmployeesRepository.swift; sourceTree = "<group>"; };
+		CEBCCF7C2BF1974A0041657F /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
+		CEBCCF7F2BF19C5D0041657F /* DisplayingEmployeesRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayingEmployeesRepositoryProtocol.swift; sourceTree = "<group>"; };
+		CEBCCF812BF19CDA0041657F /* SortEmployeesUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortEmployeesUseCaseImpl.swift; sourceTree = "<group>"; };
+		CEBCCF832BF19FDD0041657F /* EmployeeFilteringService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeFilteringService.swift; sourceTree = "<group>"; };
+		CEBCCF852BF1A0C60041657F /* FilterEmployeesUseCaseImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterEmployeesUseCaseImpl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,7 +201,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEBCCF152BF0DF1B0041657F /* RxSwift-Dynamic in Frameworks */,
 				CEBCCF132BF0DF1B0041657F /* RxSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -198,14 +220,11 @@
 				CEBCCF0B2BF0DDD90041657F /* RxSwift in Frameworks */,
 				CEBCCEDB2BF004E80041657F /* DataLayer.framework in Frameworks */,
 				CEBCCF302BF0FF780041657F /* RxCocoa in Frameworks */,
-				CEBCCF042BF0C0740041657F /* Swinject-Dynamic in Frameworks */,
 				CE19E89C2BEFFFBD002273EA /* Domain.framework in Frameworks */,
 				CEBCCF022BF0C0740041657F /* Swinject in Frameworks */,
 				CE19E8812BEFFC6A002273EA /* SnapKit in Frameworks */,
-				CEBCCF0D2BF0DDD90041657F /* RxSwift-Dynamic in Frameworks */,
 				CE19E86B2BEFD149002273EA /* FirebaseAnalytics in Frameworks */,
 				CE19E86D2BEFD149002273EA /* FirebaseCrashlytics in Frameworks */,
-				CE19E8832BEFFC6A002273EA /* SnapKit-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,7 +232,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEBCCF112BF0DE170041657F /* RxSwift-Dynamic in Frameworks */,
 				CEBCCF0F2BF0DE170041657F /* RxSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -278,6 +296,7 @@
 		CE19E88A2BEFFFBC002273EA /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				CEBCCF792BF1953F0041657F /* Repository */,
 				CEBCCF482BF12CBA0041657F /* Services */,
 				CEBCCF162BF0E63F0041657F /* UseCases */,
 				CEBCCEF52BF0BE260041657F /* Interfaces */,
@@ -301,6 +320,7 @@
 				CE19E8AE2BF00119002273EA /* Employee.swift */,
 				CEBCCEF12BF0BCE30041657F /* ThemeType.swift */,
 				CEBCCF432BF120CF0041657F /* SortType.swift */,
+				CEBCCF7C2BF1974A0041657F /* Filter.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -401,6 +421,7 @@
 		CEBCCF162BF0E63F0041657F /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				CEBCCF762BF190E60041657F /* Filter */,
 				CEBCCF452BF12C430041657F /* Sort */,
 				CEBCCF3B2BF114E50041657F /* Employees */,
 				CEBCCF172BF0E6520041657F /* Theme */,
@@ -456,7 +477,7 @@
 			isa = PBXGroup;
 			children = (
 				CEBCCF462BF12C4D0041657F /* SortEmployeesUseCase.swift */,
-				CEBCCF4B2BF12E7C0041657F /* SortEmployeesUseCaseImpl.swift */,
+				CEBCCF812BF19CDA0041657F /* SortEmployeesUseCaseImpl.swift */,
 			);
 			path = Sort;
 			sourceTree = "<group>";
@@ -465,6 +486,7 @@
 			isa = PBXGroup;
 			children = (
 				CEBCCF492BF12CC60041657F /* EmployeeSortingService.swift */,
+				CEBCCF832BF19FDD0041657F /* EmployeeFilteringService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -484,6 +506,7 @@
 			children = (
 				CEBCCF532BF142560041657F /* EmployeesViewController.swift */,
 				CEBCCF542BF142560041657F /* SettingsViewController.swift */,
+				CEBCCF6E2BF177E20041657F /* FilterViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -509,6 +532,7 @@
 			children = (
 				CEBCCF5A2BF142560041657F /* EmployeesViewModel.swift */,
 				CEBCCF5B2BF142560041657F /* EmployeeViewModel.swift */,
+				CEBCCF742BF190650041657F /* FilterViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -516,6 +540,7 @@
 		CEBCCF5E2BF142560041657F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CEBCCF722BF1892D0041657F /* TextFieldWithPadding.swift */,
 				CEBCCF5D2BF142560041657F /* EmployeeTableViewCell.swift */,
 			);
 			path = Views;
@@ -533,6 +558,24 @@
 			);
 			path = Presentation;
 			sourceTree = SOURCE_ROOT;
+		};
+		CEBCCF762BF190E60041657F /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				CEBCCF772BF190FB0041657F /* FilterEmployeesUseCase.swift */,
+				CEBCCF852BF1A0C60041657F /* FilterEmployeesUseCaseImpl.swift */,
+			);
+			path = Filter;
+			sourceTree = "<group>";
+		};
+		CEBCCF792BF1953F0041657F /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				CEBCCF7A2BF195590041657F /* DisplayingEmployeesRepository.swift */,
+				CEBCCF7F2BF19C5D0041657F /* DisplayingEmployeesRepositoryProtocol.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -572,7 +615,6 @@
 			name = Domain;
 			packageProductDependencies = (
 				CEBCCF122BF0DF1B0041657F /* RxSwift */,
-				CEBCCF142BF0DF1B0041657F /* RxSwift-Dynamic */,
 			);
 			productName = Domain;
 			productReference = CE19E8892BEFFFBC002273EA /* Domain.framework */;
@@ -619,11 +661,8 @@
 				CE19E86A2BEFD149002273EA /* FirebaseAnalytics */,
 				CE19E86C2BEFD149002273EA /* FirebaseCrashlytics */,
 				CE19E8802BEFFC6A002273EA /* SnapKit */,
-				CE19E8822BEFFC6A002273EA /* SnapKit-Dynamic */,
 				CEBCCF012BF0C0740041657F /* Swinject */,
-				CEBCCF032BF0C0740041657F /* Swinject-Dynamic */,
 				CEBCCF0A2BF0DDD90041657F /* RxSwift */,
-				CEBCCF0C2BF0DDD90041657F /* RxSwift-Dynamic */,
 				CEBCCF2F2BF0FF780041657F /* RxCocoa */,
 			);
 			productName = "employee-list";
@@ -638,6 +677,7 @@
 				CEBCCEC42BF004E80041657F /* Sources */,
 				CEBCCEC52BF004E80041657F /* Frameworks */,
 				CEBCCEC62BF004E80041657F /* Resources */,
+				CEBCCF712BF17E710041657F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -647,7 +687,6 @@
 			name = DataLayer;
 			packageProductDependencies = (
 				CEBCCF0E2BF0DE170041657F /* RxSwift */,
-				CEBCCF102BF0DE170041657F /* RxSwift-Dynamic */,
 			);
 			productName = Data;
 			productReference = CEBCCEC82BF004E80041657F /* DataLayer.framework */;
@@ -824,17 +863,23 @@
 				CEBCCF3D2BF114F70041657F /* GetEmployeesUseCase.swift in Sources */,
 				CEBCCF472BF12C4D0041657F /* SortEmployeesUseCase.swift in Sources */,
 				CE19E8AF2BF00119002273EA /* Employee.swift in Sources */,
+				CEBCCF802BF19C5D0041657F /* DisplayingEmployeesRepositoryProtocol.swift in Sources */,
 				CEBCCF4A2BF12CC60041657F /* EmployeeSortingService.swift in Sources */,
+				CEBCCF862BF1A0C60041657F /* FilterEmployeesUseCaseImpl.swift in Sources */,
 				CEBCCF422BF116520041657F /* EmployeeRepositoryProtocol.swift in Sources */,
-				CEBCCF4C2BF12E7C0041657F /* SortEmployeesUseCaseImpl.swift in Sources */,
 				CEBCCF222BF0E9D80041657F /* ChangeThemeUseCaseImpl.swift in Sources */,
+				CEBCCF822BF19CDA0041657F /* SortEmployeesUseCaseImpl.swift in Sources */,
 				CEBCCF1C2BF0E6DF0041657F /* ChangeThemeUseCase.swift in Sources */,
+				CEBCCF782BF190FB0041657F /* FilterEmployeesUseCase.swift in Sources */,
 				CEBCCF442BF120CF0041657F /* SortType.swift in Sources */,
+				CEBCCF842BF19FDD0041657F /* EmployeeFilteringService.swift in Sources */,
 				CEBCCF262BF0F73F0041657F /* GetThemeUseCaseImpl.swift in Sources */,
 				CEBCCEF82BF0BE7A0041657F /* ThemeRepositoryProtocol.swift in Sources */,
 				CEBCCF242BF0F7040041657F /* GetThemeUseCase.swift in Sources */,
+				CEBCCF7B2BF195590041657F /* DisplayingEmployeesRepository.swift in Sources */,
 				CEBCCF3F2BF115F90041657F /* GetEmployeesUseCaseImpl.swift in Sources */,
 				CEBCCEF22BF0BCE30041657F /* ThemeType.swift in Sources */,
+				CEBCCF7D2BF1974A0041657F /* Filter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -850,12 +895,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEBCCF752BF190650041657F /* FilterViewModel.swift in Sources */,
 				CE3E2E2E2BEF4EE200FB2230 /* AppDelegate.swift in Sources */,
 				CEBCCF672BF142560041657F /* EmployeesViewModel.swift in Sources */,
 				CEBCCF662BF142560041657F /* ThemeManager.swift in Sources */,
 				CEBCCF632BF142560041657F /* EmployeesViewController.swift in Sources */,
 				CEBCCF692BF142560041657F /* EmployeeTableViewCell.swift in Sources */,
 				CEBCCF3A2BF111460041657F /* DateFormatter+Ext.swift in Sources */,
+				CEBCCF732BF1892D0041657F /* TextFieldWithPadding.swift in Sources */,
+				CEBCCF6F2BF177E20041657F /* FilterViewController.swift in Sources */,
 				CE3E2E302BEF4EE200FB2230 /* SceneDelegate.swift in Sources */,
 				CEBCCEFF2BF0C0190041657F /* DIContainer.swift in Sources */,
 				CEBCCF682BF142560041657F /* EmployeeViewModel.swift in Sources */,
@@ -3554,50 +3602,25 @@
 			package = CE19E87F2BEFFC6A002273EA /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
 		};
-		CE19E8822BEFFC6A002273EA /* SnapKit-Dynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CE19E87F2BEFFC6A002273EA /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = "SnapKit-Dynamic";
-		};
 		CEBCCF012BF0C0740041657F /* Swinject */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = CEBCCF002BF0C0740041657F /* XCRemoteSwiftPackageReference "Swinject" */;
 			productName = Swinject;
-		};
-		CEBCCF032BF0C0740041657F /* Swinject-Dynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CEBCCF002BF0C0740041657F /* XCRemoteSwiftPackageReference "Swinject" */;
-			productName = "Swinject-Dynamic";
 		};
 		CEBCCF0A2BF0DDD90041657F /* RxSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = CEBCCF092BF0DDD90041657F /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxSwift;
 		};
-		CEBCCF0C2BF0DDD90041657F /* RxSwift-Dynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CEBCCF092BF0DDD90041657F /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = "RxSwift-Dynamic";
-		};
 		CEBCCF0E2BF0DE170041657F /* RxSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = CEBCCF092BF0DDD90041657F /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxSwift;
 		};
-		CEBCCF102BF0DE170041657F /* RxSwift-Dynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CEBCCF092BF0DDD90041657F /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = "RxSwift-Dynamic";
-		};
 		CEBCCF122BF0DF1B0041657F /* RxSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = CEBCCF092BF0DDD90041657F /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxSwift;
-		};
-		CEBCCF142BF0DF1B0041657F /* RxSwift-Dynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CEBCCF092BF0DDD90041657F /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = "RxSwift-Dynamic";
 		};
 		CEBCCF2F2BF0FF780041657F /* RxCocoa */ = {
 			isa = XCSwiftPackageProductDependency;

@@ -9,5 +9,5 @@ import Foundation
 import RxSwift
 
 public protocol SortEmployeesUseCase {
-  func execute(sortType: SortType, employees: [Employee]) -> [Employee]
+  func execute(sortType: SortType)
 }

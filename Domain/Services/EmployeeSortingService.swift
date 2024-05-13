@@ -6,45 +6,46 @@
 //
 
 import Foundation
+import RxSwift
 
 final public class EmployeeSortingService {
   static public func sort(
     _ employees: [Employee],
     with sortType: SortType
-  ) -> [Employee] {
+  ) -> Observable<[Employee]> {
     switch sortType {
     case .nameAsc:
-      return employees.sorted {
+      return Observable.just(employees.sorted {
         $0.name < $1.name
-      }
+      }) 
     case .nameDesc:
-      return employees.sorted {
+      return Observable.just(employees.sorted {
         $0.name >= $1.name
-      }
+      })
     case .idAsc:
-      return employees.sorted {
+      return Observable.just(employees.sorted {
         $0.id < $1.id
-      }
+      })
     case .idDesc:
-      return employees.sorted {
+      return Observable.just(employees.sorted {
         $0.id >= $1.id
-      }
+      })
     case .ageAsc:
-      return employees.sorted {
+      return Observable.just(employees.sorted {
         $0.age < $1.age
-      }
+      })
     case .ageDesc:
-      return employees.sorted {
+      return Observable.just(employees.sorted {
         $0.age >= $1.age
-      }
+      })
     case .expAsc:
-      return employees.sorted {
+      return Observable.just(employees.sorted {
         $0.experience < $1.experience
-      }
+      })
     case .expDesc:
-      return employees.sorted {
+      return Observable.just(employees.sorted {
         $0.experience >= $1.experience
-      }
+      })
     }
   }
 }

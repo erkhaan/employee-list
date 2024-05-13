@@ -14,8 +14,6 @@ final class DIContainer {
   static let shared: Container = {
     let container = Container()
     
-    // MARK: - Repositories
-    
     container.register(ThemeRepositoryProtocol.self) { _ in
       return ThemeDataRepository()
     }.inObjectScope(.container)
@@ -24,7 +22,10 @@ final class DIContainer {
       return EmployeesDataRepository()
     }.inObjectScope(.container)
     
-    // MARK: - UseCases
+    container.register(DisplayingEmployeesRepositoryProtocol.self) { r in
+      return DisplayingEmployeesRepository(
+        getEmployeesFromDataRepository: r.resolve(GetEmployeesUseCase.self)!)
+    }.inObjectScope(.container)
     
     container.register(GetThemeUseCase.self) { r in
       return GetThemeUseCaseImpl(
@@ -40,9 +41,15 @@ final class DIContainer {
       return GetEmployeesUseCaseImpl(
         repository: r.resolve(EmployeesRepositoryProtocol.self)!)
     }.inObjectScope(.container)
-
-    container.register(SortEmployeesUseCase.self) { _ in
-      return SortEmployeesUseCaseImpl()
+    
+    container.register(SortEmployeesUseCase.self) { r in
+      return SortEmployeesUseCaseImpl(
+        repository: r.resolve(DisplayingEmployeesRepositoryProtocol.self)!)
+    }.inObjectScope(.container)
+    
+    container.register(FilterEmployeesUseCase.self) { r in
+      return FilterEmployeesUseCaseImpl(
+        repository: r.resolve(DisplayingEmployeesRepositoryProtocol.self)!)
     }.inObjectScope(.container)
     
     return container
